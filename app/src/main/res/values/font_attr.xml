@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomFontTextView">
+        <attr name="text_font" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CustomFontButton">
+        <attr name="button_font" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CustomFontEditText">
+        <attr name="edittext_font" format="string"/>
+    </declare-styleable>
+
+
+        <declare-styleable name="WeekView">
+            <attr name="position" format="integer" />
+        </declare-styleable>
+
+
+
+
+
+</resources>
