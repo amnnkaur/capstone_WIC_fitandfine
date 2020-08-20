@@ -1,9 +1,12 @@
 package com.lambton.capstone_wic_fitandfine.activities;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.PhoneNumberFormattingTextWatcher;
@@ -12,16 +15,21 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -65,7 +73,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RegistrationFormActivity extends BasicActivity implements View.OnClickListener {
+public class RegistrationFormActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = RegistrationFormActivity.class.getSimpleName();
     public static final String BUNDLE_USER_OBJECT = "bundle_user_object";
@@ -145,7 +153,7 @@ public class RegistrationFormActivity extends BasicActivity implements View.OnCl
 
         callbackManager = CallbackManager.Factory.create();
         facedata = new Facebook();
-        //facebook_login();
+        facebooklogin();
 
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
@@ -159,9 +167,17 @@ public class RegistrationFormActivity extends BasicActivity implements View.OnCl
         hidekeyboard();
 
     }
+    public void hidekeyboard() {
+        try {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
-    private void initUIViews() {
+        private void initUIViews() {
 
         userNameEditText = (EditText) findViewById(R.id.activity_reg_form_edittext_name);
         emailEditText = (EditText) findViewById(R.id.activity_reg_form_edittext_email);
@@ -232,7 +248,7 @@ public class RegistrationFormActivity extends BasicActivity implements View.OnCl
         }
     }
     public void registeruser(String email, String password) {
-
+        displaydialog("Loading please wait....");
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -267,9 +283,8 @@ public class RegistrationFormActivity extends BasicActivity implements View.OnCl
 
                                             startActivity(new Intent(RegistrationFormActivity.this, LoginActivity.class));
                                             // Toast.makeText(MainActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-                                            //AlertUtil.showAlertDialog(this,"Registered successfully");
-                                            displayAlert("Registered successfully",llFacebook);
-                                            dialog.dismiss();
+                                            AlertUtil.showAlertDialog(RegistrationFormActivity.this,"Registered successfully");
+
                                         }
                                     }
                                 });
@@ -283,8 +298,20 @@ public class RegistrationFormActivity extends BasicActivity implements View.OnCl
         // [END create_user_with_email]
 
     }
+    public  void displaydialog( String strMessage) {
+        Dialog dialog;
+        dialog = new Dialog(RegistrationFormActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(RegistrationFormActivity.this, R.color.transparent)));
+        dialog.setContentView(R.layout.loading_dialog);
+        dialog.setCancelable(true);
 
+        TextView message= dialog.findViewById(R.id.txt_loading);
+        message.setText(strMessage);
 
+        dialog.show();
+    }
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -383,15 +410,11 @@ public class RegistrationFormActivity extends BasicActivity implements View.OnCl
     }
 
 
-    public void facebook_login() {
+    public void facebooklogin() {
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-
-                System.out.println("onSuccess");
                 String accessToken = loginResult.getAccessToken().getToken();
-                Log.i("accessToken", accessToken);
-
                 GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
 
                     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
