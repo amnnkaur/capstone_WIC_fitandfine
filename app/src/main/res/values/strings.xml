@@ -29,6 +29,9 @@
     <string name="all_close">Close</string>
     <string name="loading">Loading…</string>
 
+    <!-- Facebook Login-->
+    <string name="facebook_app_id">239534740763087</string>
+    <string name="fb_login_protocol_scheme">fb239534740763087</string>
 
     <!-- Splash -->
     <string name="splash_slogan">Making the world feel better\n without addiction</string>
