@@ -1,8 +1,10 @@
-package com.lambton.capstone_wic_fitandfine;
+package com.lambton.capstone_wic_fitandfine.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.lambton.capstone_wic_fitandfine.R;
 
 public class SplashActivity extends AppCompatActivity {
 
