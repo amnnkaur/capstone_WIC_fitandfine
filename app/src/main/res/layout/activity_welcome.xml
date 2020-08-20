@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_onboarding_toolbar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/activity_welcome_title"
+        style="@style/onboarding_page_title"
+        android:fontFamily="@font/rale_bold"
+        android:text="@string/register_welcome"
+        android:textColor="@color/nav_purple" />
+
+    <TextView
+        android:id="@+id/activity_welcome_message"
+        style="@style/onboarding_page_subheading"
+        android:layout_marginTop="@dimen/margin_between_field"
+        android:text="@string/register_welcome_message" />
+
+    <ImageView
+        android:id="@+id/activity_welcome_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_48dp"
+        android:alpha="0.5"
+        android:src="@drawable/watson_logo_3x" />
+
+    <Button
+        android:id="@+id/activity_welcome_get_started"
+        style="@style/button_onboarding"
+        android:layout_marginTop="@dimen/margin_48dp"
+        android:background="@color/nav_purple"
+        android:text="@string/register_welcome_get_started" />
+
+
+    <TextView
+        android:id="@+id/activity_welcome_have_account"
+        style="@style/onboarding_page_subheading"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:text="@string/register_welcome_have_account"
+        android:textSize="@dimen/font_body" />
+
+    <TextView
+        android:id="@+id/activity_welcome_log_in"
+        style="@style/onboarding_page_subheading"
+        android:layout_marginBottom="@dimen/margin_extra_big"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/register_welcome_log_in_now" />
+</LinearLayout>
