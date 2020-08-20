@@ -1,3 +1,514 @@
 <resources>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
     <string name="app_name">capstone_WIC_fitandfine</string>
+    <string name="app_authorities">ccom.lambton.capstone_wic_fitandfine</string>
+
+
+    <!-- All -->
+    <string name="all_cancel">Cancel</string>
+    <string name="all_done">Done</string>
+    <string name="all_select">Select</string>
+    <string name="all_ok">Ok</string>
+    <string name="all_settings">Settings</string>
+    <string name="all_date">Date</string>
+    <string name="all_next">Next</string>
+    <string name="all_edit">Edit</string>
+    <string name="all_pain_level">Pain Level</string>
+    <string name="all_pain_type">Pain Type</string>
+    <string name="all_pain_area">Pain Area</string>
+    <string name="all_email">Email</string>
+    <string name="all_submit">Submit</string>
+    <string name="all_pain">Pain</string>
+    <string name="all_medication">Medication</string>
+    <string name="all_pain_history">Pain History</string>
+    <string name="all_my_therapies">My Therapies</string>
+    <string name="all_articles">Articles</string>
+    <string name="all_therapies">Therapies</string>
+    <string name="all_send">Send</string>
+    <string name="all_close">Close</string>
+    <string name="loading">Loading…</string>
+
+
+    <!-- Splash -->
+    <string name="splash_slogan">Making the world feel better\n without addiction</string>
+
+    <!-- Login -->
+    <string name="login_use_fingerprint_to_unlock">Use fingerprint to unlock</string>
+    <string name="login_hint_username">EMAIL</string>
+    <string name="login_hint_password">PASSWORD</string>
+    <string name="login_text_forgot_password">Forgot Password?</string>
+    <string name="login_text_remember_me">Remember Me</string>
+    <string name="login_text_sign_in">Sign In</string>
+    <string name="login_text_new_user">New to Ask Watson Pain?</string>
+    <string name="login_text_create_account">Create Account</string>
+
+    <!-- Registration -->
+    <string name="register_welcome">Welcome</string>
+    <string name="register_welcome_message">You\'re a few steps away from better health!\n Fit and Fine is here to help!</string>
+    <string name="register_welcome_get_started">Let\'s Get Started</string>
+    <string name="register_welcome_have_account">Have an account?</string>
+    <string name="register_welcome_log_in_now">Log In Now</string>
+    <string name="register_registration">Registration</string>
+    <string name="register_message">We just need a few things to make the\n experience right for you</string>
+    <string name="register_hint_name">NAME</string>
+    <string name="register_hint_email">EMAIL</string>
+    <string name="register_hint_phone">PHONE</string>
+    <string name="register_hint_password">PASSWORD</string>
+    <string name="register_hint_confirm_password">CONFIRM PASSWORD</string>
+    <string name="register_medical_disclaimer">Medical Disclaimer</string>
+    <string name="register_medical_description">Our service is intended to provide general educational information and to help users better utilize their own health care services.  We do not provide medical advice.</string>
+    <string name="register_disclaimer_message1">Here\'s a few important things that you\n should know</string>
+    <string name="register_disclaimer_message2">Please read these terms and conditions carefully before using AskWatsonPain.</string>
+    <string name="register_disclaimer_message3">These terms and conditions cover all the services we provide to you through our mobile application and our website askwatsonpain.com. You will be asked to accept these terms as part of the user registration process.</string>
+    <string name="register_disclaimer_agree">I Agree to the Terms and Conditions</string>
+
+
+    <!-- Dashboard -->
+    <string name="dashboard_activity_title">DashboardActivity</string>
+    <string name="dashboard_tab_text_dashboard">Dashboard</string>
+    <string name="dashboard_tab_text_alerts">Alerts</string>
+    <string name="dashboard_tab_text_calendar">Calendar</string>
+    <string name="dashboard_surveys">Surveys</string>
+    <string name="dashboard_personal_insights">Personal Insights</string>
+    <string name="dashboard_progress">Progress</string>
+    <string name="dashboard_forums">Forums</string>
+    <string name="dashboard_blog">Blog</string>
+
+    <!-- Therapies -->
+    <string name="therapies_conventional">Conventional</string>
+    <string name="therapies_alternative">Alternative</string>
+    <string name="therapies_physical">Physical</string>
+    <string name="therapies_risk">Safety Issues/ Risk Factors</string>
+    <string name="therapies_administration">Route of Administration</string>
+    <string name="therapies_form">Form</string>
+    <string name="therapies_non_medicinal">Non Medicinal Ingredients</string>
+    <string name="therapies_medicinal">Medicinal/ Therapeutic Information</string>
+    <string name="therapies_suggested">Suggested</string>
+    <string name="therapies_saved">Saved</string>
+
+
+    <!-- Notes -->
+    <string name="notes_my_notes">My Notes</string>
+    <string name="notes_care_provider_notes">Care Provider Notes</string>
+    <string name="notes_new_note">New Note</string>
+    <string name="notes_attachments">Attachments</string>
+    <string name="notes_add_note">Add Note</string>
+    <string name="notes_note">Note</string>
+    <string name="notes_add_subject">Add Subject</string>
+    <string name="notes_subject">Subject</string>
+    <string name="notes_entries">Entries</string>
+    <string name="notes_take_photo">Take Photo</string>
+    <string name="notes_photo_library">Photo Library</string>
+    <string name="notes_share_via_email">Share Via Email</string>
+
+
+    <!-- Pain Areas -->
+    <string name="pain_areas">Pain Areas</string>
+    <string name="pain_areas_tracking">Tracking</string>
+    <string name="pain_areas_not_tracking">Not Tracking</string>
+
+
+    <!-- Add Pain -->
+    <string name="add_pain_pain_detail">Pain Detail</string>
+    <string name="add_pain_type">Type</string>
+    <string name="add_pain_track_pain">Track Pain</string>
+    <string name="add_pain_reminder">Reminder</string>
+    <string name="add_pain_remind_me">Remind Me</string>
+    <string name="add_pain_notify_me">Notify Me</string>
+    <string name="add_pain_repeats">Repeats</string>
+    <string name="add_pain_add_medication">Add Medication</string>
+    <string name="add_pain_medication_description">These medications are used when logging pain.</string>
+    <string name="add_pain_add_therapy">Add Therapy</string>
+    <string name="add_pain_therapy_description">These therapies are used when logging pain.</string>
+    <string name="add_pain_underlying_causes">Underlying Causes</string>
+    <string name="add_pain_enter_text">Enter Text</string>
+    <string name="add_pain_enter_medication">Enter Medication</string>
+    <string name="add_pain_enter_therapy">Enter Therapy</string>
+    <string name="add_pain_area">Add Pain Area</string>
+    <string name="add_to_pain_area">Add to Pain Area</string>
+    <!-- Edit Pain -->
+    <string name="edit_pain_level_starting">Pain Level (Starting)</string>
+
+
+    <string name="privacy_policy_description">The privacy of personal information is of paramount importance to AWP and its users. AWP follows strict HIPAA guidelines with respect to the collection, storage and treatment of personal information - https://www.hhs.gov/hipaa/for-professionals/privacy/index.html. As a further safeguard, blockchain technology is the backbone of AWP’s data storage and transfer. Blockchain uses best practice data encryption to ensure the most secure environment for the privacy of your personal information. </string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- Log Pain -->
+    <string name="log_pain">Log Pain</string>
+    <string name="log_pain_level">Log Pain Level</string>
+    <string name="log_pain_hows_your_pain">How is your pain today?</string>
+
+    <!-- About -->
+    <string name="about">About</string>
+    <string name="about_contact_us">Contact Us</string>
+    <string name="about_welcome_ask_watson_pain">Welcome to\nAsk Watson Pain</string>
+    <string name="about_slogan">Making the world feel better without addiction</string>
+    <string name="about_opening_paragraphs">We are devoted to efficiently identifying and discovering effective treatment options for chronic pain through our revolutionary platform Ask Watson Pain, powered by IBM Watson. Ask Watson Pain’s artificial intelligence environment is designed to offer advanced searching and analytics to help diagnose and discover therapeutic solutions, both conventional and non-conventional.\n\nWe empower healthcare providers and patients to collaborate and discover suitable treatment options for chronic pain. The knowledge gained by Watson supports patients with chronic pain by giving them a deeper understanding to help monitor and manage their conditions.\n\nOur mission is to ignite a shift in the diagnosis, research, and therapeutic planning of the vast majority of chronic pain conditions. Ask Watson Pain’s ability to identify alternative treatment options for chronic pain will have a profoundly positive impact in the battle to stop the growing opioid crisis.</string>
+    <string name="about_our_policies">Our Policies</string>
+    <string name="about_policies_paragraph">We are devoted to efficiently identifying and discovering effective treatment options for chronic pain through our revolutionary platform Ask Watson Pain, powered by IBM Watson. Ask Watson Pain’s artificial intelligence environment is designed to offer advanced searching and analytics to help diagnose and discover therapeutic solutions, both conventional and non-conventional.</string>
+    <string name="about_medical_awareness">Medical Awareness</string>
+    <string name="about_medical_awareness_paragraph">We empower healthcare providers and patients to collaborate and discover suitable treatment options for chronic pain. The knowledge gained by Watson supports patients with chronic pain by giving them a deeper understanding to help monitor and manage their conditions.</string>
+    <string name="about_need_help">Need Help?</string>
+    <string name="about_need_help_paragraph">We are incredibly responsive to your requests and value your questions. We are here to help, feel free to reach out to us.</string>
+    <string name="about_contact_ask_watson_pain">Contact Ask Watson Pain</string>
+
+    <!--Menu Titles -->
+    <string name="menu_patient_profile">Profile</string>
+    <string name="menu_patient_alerts">Alerts</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_treatment">Treatment</string>
+    <string name="menu_patient_notes">Notes</string>
+    <string name="menu_patient_social">Social</string>
+    <string name="menu_personality_profile">Personality Profile</string>
+    <string name="menu_logout">Logout</string>
+    <string name="drawer_open">Open</string>
+    <string name="nav_view_ask_watson_button">Ask Watson</string>
+    <string name="nav_header_static_hi_user">Hi User!</string>
+
+
+    <!--Font Names-->
+    <string name="font_lato_regular">fonts/Lato-Regular.ttf</string>
+    <string name="font_test">fonts/test.ttf</string>
+    <string name="font_lato_light">fonts/Lato-Light.ttf</string>
+    <string name="font_lato_bold">fonts/Lato-Bold.ttf</string>
+    <string name="font_lato_italic">fonts/Lato-Italic.ttf</string>
+    <string name="font_lato_bold_italic">fonts/Lato-BoldItalic.ttf</string>
+
+    <!--Alert Titles-->
+    <string name="alert_ok_title">Ok</string>
+    <string name="alert_cancel_title">Cancel</string>
+    <string name="alert_network_error">Network not available. Please try again later.</string>
+    <string name="toast_no_fingerprint_sensor_found">Your Device does not have a Fingerprint Sensor</string>
+    <string name="alert_fingerprint_permission_not_enabled">Fingerprint authentication permission not enabled</string>
+    <string name="alert_register_fingerprint_in_settings">Register at least one fingerprint in Settings</string>
+    <string name="alert_enable_lock_setttings">Please enable Lock screen security in Settings</string>
+    <string name="fingerprint_auth_failed">Authentication failed</string>
+    <string name="alert_fingerprint_auth_failed">Authentication Failed</string>
+    <string name="alert_button_title_settings">Settings</string>
+    <string name="alert_button_title_cancel">Cancel</string>
+    <string name="alert_title_register_fingerprint">Register Fingerprint</string>
+    <string name="alert_title_lock_screen_not_enabled">Lock Screen not enabled</string>
+    <string name="alert_title_permission_needed">Permission Needed</string>
+
+    <!--Login Screens-->
+    <string name="xml_use_fingerprint_to_unlock">Use fingerprint to unlock</string>
+    <string name="login_text_or">or</string>
+    <string name="login_text_sign_in_with_facebook">Sign in with facebook</string>
+    <string name="login_text_sign_in_with_twitter">Sign in with twitter</string>
+
+    <!-- Screen Titles-->
+    <string name="screen_title_alerts">Alerts</string>
+    <string name="screen_title_phm">Personal Health Monitor</string>
+    <string name="screen_title_alerts_settings">Alerts Settings</string>
+    <string name="screen_title_profile">Profile</string>
+    <string name="screen_title_edit_profile">Edit Profile</string>
+    <string name="activity_treatment_title">Treatment</string>
+    <string name="activity_personality_insight_title">Personality Insight</string>
+    <string name="screen_title_notes">Notes</string>
+    <string name="screen_title_filters">Filters</string>
+    <string name="activity_help_title"><![CDATA[Help & Instructions]]></string>
+    <string name="customer_care_title">For any queries and suggestions, please write us below:</string>
+    <string name="screen_title_points_challenge">Points Challenge</string>
+    <string name="screen_title_terms_and_condition"><![CDATA[Terms & Conditions]]></string>
+    <!-- UI Messages -->
+    <string name="no_calendar_app_message">Please install Calendar App.</string>
+    <string name="no_browser_app_message">Please install Browser App.</string>
+    <string name="send_mail_using_msg">Send email using-</string>
+    <string name="error_enter_all_fields_msg">All fields are mandatory.</string>
+    <string name="error_enter_valid_email_msg">Please enter valid email address.</string>
+    <string name="server_error">Unable to get data from server. Please try again later.</string>
+    <string name="error_confirm_password_not_matched">Password and Confirm Password should match</string>
+    <string name="error_phone_length_wrong">Phone number should be of 10 digits</string>
+
+    <!-- Pain History-->
+    <string name="activity_pain_history_text_search">Search</string>
+    <string name="layout_bottom_customer_care_title">Customer Care</string>
+    <string name="layout_bottom_customer_care_help_title">Help</string>
+
+    <!-- Profile-->
+    <string name="profile_personal_information">Personal Information</string>
+    <string name="profile_medical">Medical</string>
+    <string name="profile_allergies">Allergies</string>
+    <string name="profile_preexisting_conditions">Pre-existing Conditions</string>
+    <string name="profile_medications">Medications</string>
+    <string name="profile_supplements_vitamins">Supplements &amp; Vitamins</string>
+    <string name="activity_profile_name">Name</string>
+    <string name="activity_profile_gender">Gender</string>
+    <string name="activity_profile_location">Location</string>
+    <string name="activity_profile_date_of_birth">Date Of Birth</string>
+    <string name="activity_profile_height">Height</string>
+    <string name="activity_profile_weight">Weight</string>
+    <!-- Edit Profile-->
+    <string name="activity_edit_profile_name">Name:</string>
+    <string name="activity_edit_profile_gender">Gender:</string>
+    <string name="activity_edit_profile_location">Location:</string>
+    <string name="activity_edit_profile_date_of_birth">Date Of Birth:</string>
+    <string name="activity_edit_profile_height">Height:</string>
+    <string name="activity_edit_profile_weight">Weight:</string>
+    <string name="activity_treatment_text_search">Search</string>
+
+    <string name="askwatson_support_email">support@askwatsonpain.com</string>
+
+    <!--Login and Registration -->
+    <string name="login_hint_new_password">New Password</string>
+    <string name="login_hint_confirm_password">Re-enter Password</string>
+    <string name="login_text_check_email">Check Mail</string>
+    <string name="forget_password_static_message">Enter your email below to receive your password there</string>
+    <string name="activity_forgot_your_password_title">Forgot your password?</string>
+    <string name="activity_reset_password_static_message">Enter your new password below</string>
+    <string name="activity_reset_password_title">Reset password?</string>
+    <string name="activity_points_challenge_bonus_point">Bonus pt.</string>
+
+
+    <string name="message_limit_pain_area_selected">Only 4 Pain Areas can be selected at one time.</string>
+    <string name="pain_history_graph_severity"><u>Severity</u></string>
+    <string name="pain_graph_marker_cause">Cause</string>
+    <string name="pain_graph_marker_treatment">Treatment</string>
+    <string name="msg_pain_graph_select_date_range_first">Please select date range first.</string>
+    <string name="msg_pain_grid_no_data_available">No Data available</string>
+    <string name="msg_add_note_validation_attachment">Max two files can be attached</string>
+    <string name="ui_string_phm_current_pain_level">Current Pain Level</string>
+    <string name="msg_phm_data_not_available">No Pain History data available.</string>
+    <string name="msg_data_not_available">No data available.</string>
+    <string name="ui_conversation_start_typing_here">Start typing here...</string>
+    <string name="msg_register_terms_validation">Please accept Terms and Conditions</string>
+
+    <string name="action_edit">Edit</string>
+    <string name="action_next">Next</string>
+    <string name="disclaimer_message1">Here\'s a few important things that you\n should know</string>
+    <string name="disclaimer_message2">Please read these terms and conditions carefully before using AskWatsonPain.</string>
+    <string name="disclaimer_message3">These terms and conditions conver all the services we provide to you through our mobile application and our website askwatsonpain.com. You will be asked to accept these terms as part of the user registration process.</string>
+    <string name="disclaimer_agree">I Agree to the Terms and Conditions</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="tab_text_dashboard">Dashboard</string>
+    <string name="tab_text_alerts">Alerts</string>
+    <string name="tab_text_calendar">Calendar</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Dashboard -->
+    <string name="surveys">Surveys</string>
+    <string name="personal_insights">Personal Insights</string>
+    <string name="progress">Progress</string>
+    <string name="forums">Forums</string>
+    <string name="blog">Blog</string>
+
+
+    <!-- Notes -->
+    <string name="my_notes">My Notes</string>
+    <string name="physician_notes">Physician Notes</string>
+    <string name="title_activity_parent">ParentActivity</string>
+
+
+    <!-- Pain History Graph-->
+    <string name="my_pain_areas">My Pain Areas</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="treatment_compliance">Treatment Compliance</string>
+    <string name="watson_recommendation">WATSON RECOMMENDATION</string>
+    <string name="todays_log">TODAYS LOG</string>
+    <string name="show_all_logs">Show All Logs</string>
+    <string name="overall_trends">Overall Trends</string>
+    <string name="medication_quest">Did you take your medication?</string>
+    <string name="therapy_ask">Did you complete your therapy?</string>
+    <string name="title_activity_pain_detail">PainDetailActivity</string>
+    <string name="title_activity_show_all_log">ShowAllLogActivity</string>
+    <string name="title_activity_over_all_trend">OverAllTrendActivity</string>
+
+    <string name="compliance_info">This percentage has been compiled based on how often you have affirmed that you are taking the medication or therapy indicated.
+ You should do this daily in Log Pain.</string>
+    <string name="no_history_data">No Pain History Record found</string>
+    <string name="label_treatments">Treatments</string>
+    <string name="empty_text">No Data available for this duration</string>
+    <string name="no_change">No sufficient data for calculation (Min 2 records)</string>
+    <!-- <string name="not_enough_data">Not enough data available to know change in pain level for this period</string>-->
+    <string name="not_enough_data">No sufficient data for calculation (Min 2 records)</string>
+    <string name="my_physicians">My Physicians</string>
+    <string name="no_physicians">No Physician</string>
+    <string name="add_physicians">Add Physician</string>
+    <string name="add_phyc_instr">Add Physician in order to connect and share pain data"</string>
+    <string name="title_activity_add_physician">AddPhysicianActivity</string>
+    <string name="physician_name">Physician Name</string>
+    <string name="specialty">Specialty</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="fax">Fax</string>
+    <string name="add_phy_success">Physician Added Successfully!</string>
+    <string name="empty_msg">It cannot be empty</string>
+    <string name="type_message">Type message</string>
+    <string name="select_cat">SELECT ALL CATEGORIES THAT APPLY</string>
+    <string name="select_symptopms">SELECT ALL ITEMS THAT APPLY</string>
+    <string name="next">Next</string>
+    <string name="category">Categories</string>
+    <string name="locates">Items</string>
+
+    <string name="select_pain_area_category">SELECT THE PAIN AREA CATEGORY</string>
+    <string name="select_body_sub_area_category">SELECT THE PAIN AREA </string>
+
+    <string name="tab_possible">Possible (%d)</string>
+    <string name="tab_Likely">Likely (%d)</string>
+    <string name="suggested_diagnosis">Suggested Diagnosis(%d)</string>
+    <string name="view_supporting_articles">View Supporting Articles</string>
+    <string name="view_related_therapies">View Related therapies</string>
+    <string name="title_articles">Articles</string>
+    <string name="suggested">Suggested</string>
+    <string name="saved">Saved</string>
+
+
+    <string name="diagnostic">Diagnostic - %d</string>
+    <string name="educational">Educational - %d</string>
+    <string name="therapeutic">Therapeutic - %d</string>
+
+    <string name="diagnosticLabel">Diagnostic</string>
+    <string name="educationalLabel">Educational</string>
+    <string name="therapeuticLabel">Therapeutic</string>
+    <string name="label_abstract">Abstract</string>
+    <string name="title_article">Article</string>
+
+    <string name="tab_conventional">Conventional - (%d)</string>
+    <string name="tab_alternative">Alternative - (%d)</string>
+    <string name="tab_physical">Physical - (%d)</string>
+    <string name="suggested_therapies">Therapies - (%d)</string>
+    <string name="saved_articles">Saved Articles (%d)</string>
+    <string name="saved_articles_therapy">Saved Articles</string>
+    <string name="title_activity_additional_info">AdditionalInfoActivity</string>
+    <string name="label_rate">Rate</string>
+
+
+    <!-- Survey Strings-->
+    <string name="btn_continue">Continue</string>
+    <string name="btn_back">Back</string>
+    <string name="survey_sub_desc2">Just so you know\nratings are between 0-10.</string>
+    <string name="btn_survey">"Take Wellness Survey"</string>
+    <string name="btn_next">Next</string>
+    <string name="start_rating">Poor</string>
+    <string name="end_rating">Excellent</string>
+    <string name="survey_sub_desc1">Its quick and easy, get your wellness scores today. Go ahead and take your first survey.</string>
+    <string name="survey_desc1">"Watson Wellness Survey"</string>
+    <string name="survey_desc2">"Lets start by rating how you have been feeling at the moment"</string>
+    <string name="zero">0</string>
+    <string name="fifty">50</string>
+    <string name="twenty">20</string>
+    <string name="forty">40</string>
+    <string name="emotional_state">Emotional State</string>
+    <string name="psychological_support">Psychological Support</string>
+    <string name="pain">Pain</string>
+    <string name="physical_independence">Physical Independence</string>
+    <string name="physical_comfort">Physical Comfort</string>
+    <string name="physical">Physical</string>
+    <string name="mental">Mental</string>
+    <string name="physical_wellness">Physical Wellness</string>
+    <string name="mental_wellness">Mental Wellness</string>
+    <string name="question">How has your mood been, if 10 is great and 0 is feeling sad or depressed all day?</string>
+    <string name="out_of">out of 150</string>
+    <string name="past_wellness_survey">Past Wellness Surveys</string>
+    <string name="view_score_history">View Score History</string>
+    <string name="your_watson_wellness_score">Your Watson Wellness Score</string>
+    <string name="title_surveys">Surveys</string>
+
+    <string name="title_wellness_survey">Wellness Survey</string>
+    <string name="survey_diff_alert">Your input is deviating from your older input.</string>
+
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="label_effectiveness">Effectiveness</string>
+    <string name="title_activity_summary_response">SummaryResponseActivity</string>
+    <string name="title_watson_wellness_score">Watson Wellness Score</string>
+    <string name="summary">Summary</string>
+    <string name="responses">Responses</string>
+    <string name="score_history">Score History</string>
+
+    <string name="overall">Overall</string>
+
+    <string name="no_survey_history_data">No Record found</string>
+    <string name="alert_title_success">Success!</string>
+    <string name="alert_title_error">Error</string>
+
+    <!-- Profile Strings-->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="ethnicity">Ethnicity</string>
+    <string name="phone">Phone</string>
+    <string name="push_notification">PUSH NOTIFICATIONS</string>
+    <string name="other_notification">OTHER NOTIFICATIONS</string>
+    <string name="text">Text</string>
+    <string name="turn_push_notification">Turn On/Off Push Notifications</string>
+    <string name="enable_push_notification">Always enable Push Notifications to stay informed</string>
+    <string name="measurement">Measurements</string>
+    <string name="enable_touch_id">Enable Touch-ID</string>
+    <string name="add_allergy">Add Allergy</string>
+    <string name="add_medication">Add Medication</string>
+    <string name="add_existing_condition">Add Pre-existing condition</string>
+    <string name="add_supplement_vitamin">Add Supplement Vitamin</string>
+    <string name="delete">Delete</string>
+    <string name="total_daily_dosage">TOTAL DAILY DOSAGE</string>
+    <string name="medication_description">e.g. 50mg two times a day = 100mg</string>
+    <string name="allergies">Allergies</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="medications">Medications</string>
+    <string name="allergy_food">Food</string>
+    <string name="allergy_medication">Medication</string>
+
+
+    <!--Calender -->
+    <string name="health_calendar">Health Calendar</string>
+    <string name="refer_friend_text">Receive 10 activity points for referring a friend who registers for Ask Watson Pain. If they become a paid subscriber,
+earn 50 points!</string>
+    <string name="refer_friend_text2">Provide an email address and we will send them the link to register:</string>
+    <string name="media_message">Want a new way to monitor your pain so you can find solutions and get back to the activities you love? \nI recommend
+Ask Watson Pain! www.askwatsonpain.com/registercode:1234</string>
+    <string name="send_invite">SEND INVITE</string>
+    <string name="share">SHARE</string>
+    <string name="social_media">Post below text in Social Media:</string>
+    <string name="enter_email">Enter Email ID here</string>
+    <string name="add_appointment">Add Appointment</string>
+    <string name="add_journal_entry">Add Journal Entry</string>
+    <string name="new_appointment">New Appointment</string>
+
+    <!--Gamification -->
+    <string name="badge_level">Badge Levels</string>
+    <string name="badgesandranks">Badges &amp; Ranks</string>
+    <string name="pointssystem">Points System</string>
+    <string name="gamification_about_text1">The AWP experience has been designed to extend far beyond just being a tool for researching chronic pain
+conditions. We want you to view AWP as your central starting point to manage all of your chronic pain while improving your quality of life in a
+wide variety of ways, as well. We believe that engaging yourself in some of our ancillary features will improve your experience while broadening
+your knowledge base; and we wanted to make it fun. Each day you engage in features throughout AWP, you can earn points, badge and ranking that
+prove you are becoming a true master of your pain. Why have we done this? Well it is simple, our team of experts love playing games, so we
+gamified the experience. Hope you enjoy!</string>
+    <string name="gamification_about_howitworks">How it works</string>
+    <string name="gamification_about_text2">Every day matters when you are managing chronic pain conditions. So, every day that you login to AWP you earn
+points. That\'s right. Just by going into the website or app you earn points as you engage in the various features throughout AWP. For example:
+searching for pain conditions, reviewing articles, logging your pain levels, or referring friends to the site will earn you points. Points
+are accumulated over time and they are used to award badges, attain ranks, and can be redeemed in our marketplace.</string>
+    <string name="gamification_rank_text1">Badges are awarded based on points accumulated and various activities presented by AWP. See link to badges
+reference</string>
+    <string name="gamification_rank_text2">Badges are earned based on your Rank in AWP, additionally various badges are awarded based on completion of time
+based activities and promotions. Be sure to sign up for notifications and emails, so you will receive alerts about special activities for you to earn
+badges. Badges are awarded and maintained within your profile for each Rank you earn in AWP.</string>
+    <string name="gamification_rank_text3">Points are being developed for redemption in our AWP marketplace which is planned to launch in summer of 2018.
+Enjoy and have fun with "Ask Watson Pain"!</string>
+    <string name="gamification_points_text">Points are earned by interacting with the features and content throughout Ask Watson Pain (AWP). The following
+is breakdown of the various ways you can earn points.</string>
+    <string name="free_version">FREE VERSION</string>
+    <string name="premium_version">PREMIUM VERSION</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="points">POINTS</string>
+    <string name="frequency">FREQUENCY</string>
+    <string name="add_new_physicians">Add New Physician</string>
+    <string name="physician">Physician</string>
+    <string name="repeat">Repeat</string>
+    <string name="never">Never</string>
+
+    <string name="general_information">General Information</string>
+
+    <string name="add_existing_cond">Add Existing Condition</string>
+    <string name="lbscntant"> lbs.</string>
+    <string name="kgcntant"> kg</string>
+    <string name="inchescntant"> in</string>
+
+    <string name="last_updated">Last Updated: %s</string>
 </resources>
+
