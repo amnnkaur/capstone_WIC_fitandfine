@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_profile"
+        style="@style/top_toolbar_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:contentInsetStart="0dp">
+
+
+        <TextView
+            android:id="@+id/textview_profile_close"
+            style="@style/textView"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="@dimen/margin_between_field"
+            android:text="@string/all_close"
+            android:textColor="@color/accent_blue"
+            android:textSize="@dimen/font_subheading" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageview_profile_user"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_below="@+id/toolbar_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@color/toolbar_background"
+        android:src="@drawable/profile_placeholder" />
+
+    <TextView
+        android:id="@+id/textview_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview_profile_user"
+        android:background="@color/toolbar_background"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_profile_member_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_profile_name"
+        android:background="@color/toolbar_background"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview_profile_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Member"
+            android:textColor="@color/text_light_gray"
+            android:textSize="@dimen/font_caption" />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/dot" />
+
+        <TextView
+            android:id="@+id/textview_profile_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_light_gray"
+            android:textSize="@dimen/font_caption" />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/dot" />
+
+        <TextView
+            android:id="@+id/textview_profile_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_light_gray"
+            android:textSize="@dimen/font_caption" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/texview_profile_points_to_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_profile_member_info"
+        android:background="@color/toolbar_background"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/margin_extra_small"
+        android:textColor="@color/text_light_gray"
+        android:textSize="@dimen/font_caption" />
+
+    <TextView
+        android:id="@+id/textview_profile_learn_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/texview_profile_points_to_level"
+        android:background="@color/toolbar_background"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/margin_extra_small"
+        android:text="Learn more about badge levels"
+        android:textColor="@color/accent_blue"
+        android:textSize="@dimen/font_caption"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageview_profile_divider"
+        style="@style/imageView.divider"
+        android:layout_below="@id/textview_profile_learn_more" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageview_profile_divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_profile_refer_a_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/margin_between_field"
+                android:text="Refer a Friend"
+                android:textColor="@color/accent_blue"
+                android:textSize="@dimen/font_subheading" />
+
+            <ImageView style="@style/imageView.divider" />
+
+            <TextView
+                style="@style/textView.light_gray.section_header"
+                android:padding="@dimen/margin_small" />
+
+            <ImageView style="@style/imageView.divider" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_between_field">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_personal_information"
+                    android:textColor="@color/generic_text_color"
+                    android:textSize="@dimen/font_subheading" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_grey" />
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/imageView.divider"
+                android:layout_marginLeft="@dimen/margin_between_field" />
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_my_physicians"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_between_field">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/my_physicians"
+                    android:textColor="@color/generic_text_color"
+                    android:textSize="@dimen/font_subheading" />
+
+                <ImageView
+                    android:id="@+id/imageview_profile_physicians_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_grey" />
+
+                <TextView
+                    android:id="@+id/textview_profile_my_physicians_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_toLeftOf="@id/imageview_profile_physicians_chevron"
+                    />
+
+
+            </RelativeLayout>
+
+            <ImageView style="@style/imageView.divider" />
+
+            <TextView
+                style="@style/textView.light_gray.section_header"
+                android:text="@string/profile_medical"
+                android:textSize="13sp"/>
+
+            <ImageView style="@style/imageView.divider" />
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_allergies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_between_field">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_allergies"
+                    android:textColor="@color/generic_text_color"
+                    android:textSize="@dimen/font_subheading" />
+
+                <ImageView
+                    android:id="@+id/imageview_profile_allergies_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_grey" />
+
+                <TextView
+                    android:id="@+id/textview_profile_allergies_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_toLeftOf="@id/imageview_profile_allergies_chevron"
+                    />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/imageView.divider"
+                android:layout_marginLeft="@dimen/margin_between_field" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_preexisting_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_between_field">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_preexisting_conditions"
+                    android:textColor="@color/generic_text_color"
+                    android:textSize="@dimen/font_subheading" />
+
+                <ImageView
+                    android:id="@+id/imageview_profile_preexisting_conditions_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_grey" />
+
+                <TextView
+                    android:id="@+id/textview_profile_preexisting_conditions_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_toLeftOf="@id/imageview_profile_preexisting_conditions_chevron"
+                    />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/imageView.divider"
+                android:layout_marginLeft="@dimen/margin_between_field" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_medications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_between_field">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_medications"
+                    android:textColor="@color/generic_text_color"
+                    android:textSize="@dimen/font_subheading" />
+
+                <ImageView
+                    android:id="@+id/imageview_profile_medications_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_grey" />
+
+                <TextView
+                    android:id="@+id/textview_profile_medications_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_toLeftOf="@id/imageview_profile_medications_chevron"
+                    />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                style="@style/imageView.divider"
+                android:layout_marginLeft="@dimen/margin_between_field" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_profile_supplements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_between_field">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/profile_supplements_vitamins"
+                    android:textColor="@color/generic_text_color"
+                    android:textSize="@dimen/font_subheading" />
+
+                <ImageView
+                    android:id="@+id/imageview_profile_supplements_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_grey" />
+
+                <TextView
+                    android:id="@+id/textview_profile_supplements_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_toLeftOf="@id/imageview_profile_supplements_chevron"
+                    />
+
+
+            </RelativeLayout>
+
+            <ImageView style="@style/imageView.divider" />
+
+            <TextView
+                style="@style/textView.light_gray.section_header"
+                android:padding="@dimen/margin_small" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
