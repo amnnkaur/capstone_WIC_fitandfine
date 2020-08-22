@@ -6,7 +6,7 @@
                 android:height="30dp"
                 android:width="30dp" />
 
-            <solid android:color="@color/accent_blue" />
+            <solid android:color="#BA98FA" />
         </shape>
     </item>
 

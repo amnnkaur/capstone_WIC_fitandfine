@@ -43,7 +43,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="72dp"
             android:progress="1"
-            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progressBackgroundTint="#BA98FA"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progress" />
@@ -107,7 +107,7 @@
             android:minHeight="8dp"
             android:thumb="@drawable/thumb_image"
             android:thumbOffset="5dip"
-            android:progressTint="#0F9AD5"
+            android:progressTint="#BA98FA"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
