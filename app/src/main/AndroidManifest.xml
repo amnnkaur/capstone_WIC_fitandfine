@@ -10,20 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RegistrationFormActivity"
+        <activity android:name=".activities.SurveyWelcomeActivity"></activity>
+        <activity
+            android:name=".activities.RegistrationFormActivity"
             android:excludeFromRecents="true"
             android:parentActivityName=".activities.WelcomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.Translucent"
-            android:windowSoftInputMode="stateHidden|adjustResize" >
-
-        </activity>
-        <activity android:name=".activities.WelcomeActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity
+            android:name=".activities.WelcomeActivity"
             android:excludeFromRecents="true"
             android:parentActivityName=".activities.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.Translucent"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,23 +32,24 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
-        <activity android:name=".activities.RegistrationDisclaimerActivity"
+        <activity
+            android:name=".activities.RegistrationDisclaimerActivity"
             android:excludeFromRecents="true"
             android:parentActivityName=".activities.RegistrationFormActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.Translucent"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activities.DashboardActivity" />
-        <activity android:name=".activities.LoginActivity"
+        <activity
+            android:name=".activities.LoginActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.Translucent"
-            android:windowSoftInputMode="stateHidden|adjustPan" >
-
-        </activity>
+            android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name=".activities.SplashActivity" />
         <activity android:name=".activities.MainActivity" />
     </application>
