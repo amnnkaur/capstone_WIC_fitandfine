@@ -20,10 +20,10 @@
         <TextView
             android:id="@+id/textview_about_close"
             style="@style/textView"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:layout_marginStart="@dimen/margin_between_field"
             android:text="@string/all_close"
-            android:textColor="@color/accent_blue"
+            android:textColor="#BA98FA"
             android:textSize="@dimen/font_extra_big" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_gravity="right"
             android:layout_marginRight="@dimen/margin_between_field"
             android:text="@string/about_contact_us"
-            android:textColor="@color/accent_blue"
+            android:textColor="#BA98FA"
             android:textSize="@dimen/font_extra_big" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -55,7 +55,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/selector_onboarding_background_color">
+                android:background="#BA98FA">
 
                 <TextView
                     android:id="@+id/textview_about_welcome"
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/margin_between_field"
                     android:layout_marginTop="@dimen/margin_extra_big"
-                    android:text="@string/about_welcome_ask_watson_pain"
+                    android:text="@string/about_welcome_fit_fine"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font_display1"
                     android:textStyle="bold" />
@@ -150,7 +150,7 @@
                 android:paddingLeft="@dimen/margin_between_field"
                 android:paddingTop="@dimen/margin_small"
                 android:text="@string/about_contact_fit_fine"
-                android:textColor="@color/accent_blue" />
+                android:textColor="#BA98FA" />
 
 
         </LinearLayout>
