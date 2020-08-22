@@ -64,7 +64,7 @@
         android:layout_marginLeft="@dimen/margin_48dp"
         android:layout_marginRight="@dimen/margin_48dp"
         android:background="@drawable/selected_button"
-        android:backgroundTint="#0F9AD5"
+        android:backgroundTint="#BA98FA"
         android:text="@string/btn_continue"
         android:padding="16dp"
         android:textSize="16sp"
