@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginLeft="@dimen/margin_between_field"
+    android:layout_marginRight="@dimen/margin_between_field"
+    android:layout_weight="12"
+    android:gravity="center_vertical"
+    tools:showIn="@layout/activity_pain_areas">
+
+
+    <LinearLayout
+        android:id="@+id/bottom_tab_bar_customer_care_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icn_customer_care"
+            android:contentDescription="TODO" />
+
+        <com.lambton.capstone_wic_fitandfine.view.CustomFontTextView
+            style="@style/textView"
+            android:text="@string/layout_bottom_customer_care_title"
+            app:text_font="@string/font_lato_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_tab_bar_help_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icn_help"
+            android:contentDescription="TODO" />
+
+        <com.lambton.capstone_wic_fitandfine.view.CustomFontTextView
+            style="@style/textView"
+            android:gravity="center"
+            android:text="@string/layout_bottom_customer_care_help_title"
+            app:text_font="@string/font_lato_light" />
+    </LinearLayout>
+
+</RelativeLayout>
