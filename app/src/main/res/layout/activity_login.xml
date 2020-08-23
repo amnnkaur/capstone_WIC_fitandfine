@@ -188,7 +188,6 @@
                                 android:inputType="textPassword"
                                 android:maxLength="16"
                                 android:padding="10dp"
-                                android:text="123456789"
                                 android:textColor="@color/white"
                                 android:textColorHint="@color/white" />
 

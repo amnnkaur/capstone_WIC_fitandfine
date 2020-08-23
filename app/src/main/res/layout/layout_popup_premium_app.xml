@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ask_watson_nav_logo" />
+
+    <View
+        style="@style/horizontal_separator.lightGray"
+        android:layout_marginTop="@dimen/margin_between_field" />
+
+    <com.ibm.gsl.view.CustomFontTextView
+        style="@style/textView"
+        android:id="@+id/layout_paid_popup_message_text"
+        android:layout_marginTop="@dimen/margin_between_field"
+        android:padding="@dimen/margin_big"
+        android:text="test"
+        android:layout_gravity="center"
+        android:textSize="@dimen/font_subheading"
+        app:text_font="@string/font_lato_regular" />
+
+    <com.ibm.gsl.view.CustomFontButton
+        style="@style/button.blue"
+        android:id="@+id/layout_premium_popup_button"
+        android:layout_width="100dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Ok"
+        android:textSize="@dimen/font_subheading"
+        app:button_font="@string/font_lato_bold" />
+</LinearLayout>

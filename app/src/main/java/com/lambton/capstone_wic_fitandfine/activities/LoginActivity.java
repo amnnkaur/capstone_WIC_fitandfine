@@ -115,7 +115,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
     GoogleSignInClient mGoogleSignInClient;
     GoogleSignInOptions gso;
     private static final int RC_SIGN_IN = 007;
-    private static final String EMAIL = "email";
+
     CallbackManager callbackManager;
     Facebook facedata;
 
@@ -139,20 +139,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
         ll_google.setOnClickListener(this);
         ll_facebook.setOnClickListener(this);
 
-        callbackManager = CallbackManager.Factory.create();
-        facedata = new Facebook();
-
-
-        // Configure sign-in to request the user's ID, email address, and basic
-        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        hidekeyboard();
+     //   hidekeyboard();
     }
     public void hidekeyboard()
     {
@@ -168,36 +155,21 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
     public void onClick(View v) {
 
         switch (v.getId()) {
-
-            case R.id.ll_google:
-
-                signIn();
-
-                break;
-
-            case R.id.ll_facebook:
-
-                //disconnectFromFacebook();
-                LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("email", "public_profile"));
-
-                break;
-
-
             case R.id.but_login_splash:
 
                 String txt_email = input_email.getText().toString().trim();
                 String txt_password = input_password.getText().toString().trim();
-
+                Log.d("Monika12", "onComplete:dsd Monika12 ");
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
                     displayAlert("All fileds are required", ll_splash);
                 } else {
                     displaydialog("Loading please wait....");
-                    auth.signInWithEmailAndPassword(txt_email, txt_password)
+                 /*   auth.signInWithEmailAndPassword(txt_email, txt_password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-
+                                        Log.d("Monika", "onComplete:dsd Monika ");
                                         dialog.dismiss();
 
                                         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -214,214 +186,57 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
                                         displayAlert("Authentication failed!", ll_splash);
                                     }
                                 }
+                            });*/
+                    // [START sign_in_with_email]
+                    auth.signInWithEmailAndPassword(txt_email, txt_password)
+                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        // Sign in success, update UI with the signed-in user's information
+                                        //Log.d(TAG, "signInWithEmail:success");
+                                        FirebaseUser user = auth.getCurrentUser();
+
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                       // Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                        Toast.makeText(LoginActivity.this, task.getException().getMessage(),
+                                                Toast.LENGTH_SHORT).show();
+                                       // updateUI(null);
+                                    }
+                                  //  hideProgressDialog();
+                                }
                             });
+                    // [END sign_in_with_email]
+
                 }
 
                 break;
 
-            case R.id.but_signup_reg:
-
-
-                if (edt_name_reg.getText().toString().equals("")) {
-                    displayAlert("First name can't be blank", ll_splash);
-                } else if (edt_email_reg.getText().toString().equals("")) {
-
-                    displayAlert("Email can't be blank", ll_splash);
-                } else if (!isValidEmail(edt_email_reg.getText().toString())) {
-
-                    displayAlert("Please enter the valid email", ll_splash);
-                } else if (edt_pass_reg.getText().toString().equals("")) {
-
-                    displayAlert("Password can't be blank", ll_splash);
-                } else if (edt_pass_reg.getText().toString().length() < 7) {
-
-                    displayAlert("Password must be between 8-16 Character", ll_splash);
-                } else if (edt_confirm_pass_reg.getText().toString().equals("")) {
-
-                    displayAlert("Confirm Password can't be blank", ll_splash);
-                } else if (!edt_pass_reg.getText().toString().equals(edt_confirm_pass_reg.getText().toString())) {
-
-                    displayAlert("Confirm Password and Password not matched", ll_splash);
-                } else {
-                    String txt_email_reg = edt_email_reg.getText().toString().trim();
-                    String txt_password_reg = edt_pass_reg.getText().toString().trim();
-                    registeruser(txt_email_reg, txt_password_reg);
-                }
-
-                break;
-
-
-            case R.id.txt_change_login_signup:
-
-                if (change) {
-
-            /*        try {
-                        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                    slide_To_Left_invisible(ll_signup);
-                    slide_To_left_visible(ll_login);
-
-                    but_login_splash.setVisibility(View.VISIBLE);
-
-                    final Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            //Do something after 500ms
-                            but_signup_reg.setVisibility(View.GONE);
-                        }
-                    }, 500);
-
-
-                    edt_name_reg.setText("");
-                    edt_email_reg.setText("");
-                    edt_pass_reg.setText("");
-                    edt_confirm_pass_reg.setText("");
-
-                    txt_change_login_signup.setText("Don't have an account? Signup");
-                    */
-                    startActivity(new Intent(this, WelcomeActivity.class));
-                    change = false;
-                } else {
-                /*    try {
-                        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                        inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                    slide_To_Right_invisible(ll_login);
-
-                    if (ll_signup.getVisibility() == View.GONE) {
-                        ll_signup.setVisibility(View.VISIBLE);
-                        ll_signup.startAnimation(slideUp);
-                    }
-
-
-                    final Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            //Do something after 500ms
-                            but_login_splash.setVisibility(View.GONE);
-                        }
-                    }, 500);
-
-                    input_email.setText("");
-                    input_password.setText("");
-
-
-                    but_signup_reg.setVisibility(View.VISIBLE);
-
-                    txt_change_login_signup.setText("Already have an account? Login");
-*/
-                    startActivity(new Intent(this, WelcomeActivity.class));
-                    change = true;
-                }
-                break;
-        }
-    }
-
-    public static boolean isValidEmail(String st_email) {
-        if (st_email == null) {
-            return false;
-        } else {
-            return Patterns.EMAIL_ADDRESS.matcher(st_email).matches();
         }
     }
 
 
-    public void registeruser(String txt_email, String txt_password) {
-        displaydialog("Loading please wait....");
-        auth.createUserWithEmailAndPassword(txt_email, txt_password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            userProfile();
 
-                        } else {
-
-                            // Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                            displayAlert("Authentication failed.", ll_splash);
-                            dialog.dismiss();
-                        }
-                    }
-                });
-    }
-
-
-    //Set UserDisplay Name
-    private void userProfile() {
-        final FirebaseUser user = auth.getCurrentUser();
-        if (user != null) {
-            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                    .setDisplayName(edt_name_reg.getText().toString().trim())
-                    //.setPhotoUri(Uri.parse("https://example.com/jane-q-user/profile.jpg"))  // here you can set image link also.
-                    .build();
-
-            user.updateProfile(profileUpdates).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Log.d("TESTING", "User profile updated.");
-
-                        String currentuserid = user.getUid();
-
-                        FirebaseUser user = auth.getCurrentUser();
-                        String UserID = user.getEmail().replace("@", "").replace(".", "");
-
-                        DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-                        DatabaseReference ref1 = mRootRef.child("Users").child(UserID);
-
-                        ref1.child("Name").setValue(edt_name_reg.getText().toString().trim());
-                        ref1.child("Image_Url").setValue("Null");
-                        ref1.child("Email").setValue(user.getEmail());
-
-
-                        Log.d("TESTING", "Sign up Successful" + task.isSuccessful());
-                        Toast.makeText(LoginActivity.this, "Account Created ", Toast.LENGTH_SHORT).show();
-                        Log.d("TESTING", "Created Account");
-
-                        startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-                        // Toast.makeText(MainActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-                        displayAlert("Registered successfully", ll_splash);
-                        dialog.dismiss();
-                    }
-                }
-            });
-        }
-    }
-
-
-    private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+   /* @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
+        //super.onActivityResult(requestCode, resultCode, data);
         //for google
-        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            // The Task returned from this call is always completed, no need to attach
-            // a listener.
+       // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+       if (requestCode == RC_SIGN_IN) {
+           // The Task returned from this call is always completed, no need to attach
+//            // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
+           handleSignInResult(task);
         }
         else
         {
+
             //for facebook
             callbackManager.onActivityResult(requestCode, resultCode, data);
             super.onActivityResult(requestCode, resultCode, data);
-        }
+         }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -434,7 +249,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
         } catch (ApiException e) {
 
         }
-    }
+    }*/
 
 
 

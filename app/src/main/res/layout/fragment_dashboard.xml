@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_background"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageview_dashboard_profile"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_between_field"
+                android:src="@drawable/profile_neutral" />
+
+            <TextView
+                android:id="@+id/textview_dashboard_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/rale_bold"
+                android:text="Fit and Fine"
+                android:textColor="@color/generic_text_color"
+                android:textSize="@dimen/font_extra_big" />
+
+            <ImageView
+                android:id="@+id/imageview_dashboard_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_between_field"
+                android:src="@drawable/dashboard_info" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        style="@style/imageView.divider"
+        android:id="@+id/imageview_dashboard_toolbar_divider"
+        android:layout_below="@id/toolbar_dashboard" />
+
+    <ScrollView
+        android:id="@+id/scrollView_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageview_dashboard_toolbar_divider"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout_dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_dashboard_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+
+                <ImageView
+                    android:id="@+id/imageview_dashboard_log_pain"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="@dimen/margin_extra_small"
+
+                    app:layout_constraintDimensionRatio="H, 125:128"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/guideline_dashboard_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/curve_yellow" />
+
+                <ImageView
+                    android:id="@+id/imageview_dashboard_pain_areas"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/margin_extra_small"
+
+                    app:layout_constraintDimensionRatio="H, 125:128"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_dashboard_vertical"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageview_dashboard_history"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_extra_small"
+                    android:src="@drawable/history"
+                    app:layout_constraintDimensionRatio="H, 125:128"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/guideline_dashboard_vertical"
+                    app:layout_constraintTop_toBottomOf="@id/imageview_dashboard_log_pain" />
+
+                <ImageView
+                    android:id="@+id/imageview_dashboard_notes"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/margin_extra_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:src="@drawable/notes"
+                    app:layout_constraintDimensionRatio="H, 125:128"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintLeft_toRightOf="@id/guideline_dashboard_vertical"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageview_dashboard_pain_areas" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/btnSurveyList"
+                style="@style/ButtonDashboardSecondary"
+                android:drawableLeft="@drawable/survey"
+                android:drawableRight="@drawable/chevron_grey"
+                android:text="@string/dashboard_surveys" />
+
+            <ImageView style="@style/imageView.divider" />
+
+            <Button
+                style="@style/ButtonDashboardSecondary"
+                android:drawableLeft="@drawable/insights"
+                android:drawableRight="@drawable/chevron_grey"
+                android:text="@string/dashboard_personal_insights" />
+
+            <ImageView style="@style/imageView.divider" />
+
+            <Button
+                style="@style/ButtonDashboardSecondary"
+                android:drawableLeft="@drawable/progress"
+                android:drawableRight="@drawable/chevron_grey"
+                android:text="@string/dashboard_progress" />
+
+            <ImageView style="@style/imageView.divider" />
+
+            <Button
+                style="@style/ButtonDashboardSecondary"
+                android:drawableLeft="@drawable/forum"
+                android:drawableRight="@drawable/chevron_grey"
+                android:text="@string/dashboard_forums" />
+
+            <ImageView style="@style/imageView.divider" />
+
+            <Button
+                style="@style/ButtonDashboardSecondary"
+                android:drawableLeft="@drawable/blog"
+                android:drawableRight="@drawable/chevron_grey"
+                android:text="@string/dashboard_blog" />
+
+            <ImageView style="@style/imageView.divider" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

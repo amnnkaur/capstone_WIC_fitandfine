@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <include
+        android:id="@+id/activity_terms_toolbar"
+        layout="@layout/layout_onboarding_toolbar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/terms_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/activity_terms_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:button="@drawable/selector_remember_me" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_between_field"
+                android:text="@string/register_disclaimer_agree"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/terms_bottom_bar"
+        android:layout_below="@id/activity_terms_toolbar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/activity_reg_disclaimer_title"
+            style="@style/onboarding_page_title"
+            android:text="@string/screen_title_terms_and_condition" />
+
+        <TextView
+            style="@style/onboarding_page_subheading"
+            android:layout_marginTop="@dimen/margin_between_field"
+            android:text="@string/register_disclaimer_message1" />
+
+        <TextView
+            style="@style/onboarding_page_subheading"
+            android:layout_marginLeft="@dimen/margin_extra_big"
+            android:layout_marginTop="@dimen/margin_extra_big"
+            android:layout_marginRight="@dimen/margin_extra_big"
+            android:gravity="left"
+            android:text="@string/register_disclaimer_message2"
+            android:textAllCaps="true" />
+
+        <TextView
+            style="@style/onboarding_page_subheading"
+            android:layout_marginLeft="@dimen/margin_extra_big"
+            android:layout_marginTop="@dimen/margin_between_field"
+            android:layout_marginRight="@dimen/margin_extra_big"
+            android:gravity="left"
+            android:text="@string/register_disclaimer_message3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_reg_disclaimer_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_between_field" />
+
+    </LinearLayout>
+</RelativeLayout>
