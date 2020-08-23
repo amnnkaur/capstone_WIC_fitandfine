@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ChatBotWelcomActivity"></activity>
+        <activity android:name=".activities.ChatBotActivity"></activity>
+        <activity android:name=".activities.ChatBotWelcomActivity" />
         <activity android:name=".activities.ProfileSettingsActivity" />
         <activity android:name=".activities.ProfilePersonalInformationActivity" />
         <activity android:name=".activities.PersonalityInsightActivity" />

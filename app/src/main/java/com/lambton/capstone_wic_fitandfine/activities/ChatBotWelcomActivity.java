@@ -20,7 +20,7 @@ public class ChatBotWelcomActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(ChatBotWelcomActivity.this, MainActivity.class);
+                Intent intent=new Intent(ChatBotWelcomActivity.this, ChatBotActivity.class);
                 startActivity(intent);
                 finish();
             }
