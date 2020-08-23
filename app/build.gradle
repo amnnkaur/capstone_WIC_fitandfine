@@ -49,6 +49,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.viewpager:viewpager:1.0.0"
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'ai.api:sdk:2.0.7@aar'
+    implementation 'ai.api:libai:1.6.12'
 
 
 }
