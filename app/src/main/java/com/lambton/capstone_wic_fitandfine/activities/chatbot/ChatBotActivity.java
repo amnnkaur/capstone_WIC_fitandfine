@@ -1,4 +1,4 @@
-package com.lambton.capstone_wic_fitandfine.activities;
+package com.lambton.capstone_wic_fitandfine.activities.chatbot;
 
 import androidx.appcompat.app.AppCompatActivity;
 

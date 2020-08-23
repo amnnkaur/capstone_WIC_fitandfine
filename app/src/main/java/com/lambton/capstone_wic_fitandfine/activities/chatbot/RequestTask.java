@@ -1,7 +1,9 @@
-package com.lambton.capstone_wic_fitandfine.activities;
+package com.lambton.capstone_wic_fitandfine.activities.chatbot;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+
+import com.lambton.capstone_wic_fitandfine.activities.chatbot.ChatBotActivity;
 
 import ai.api.AIServiceContext;
 import ai.api.AIServiceException;
