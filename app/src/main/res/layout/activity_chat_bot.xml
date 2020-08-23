@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".activities.ChatBotActivity">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/acme"
-        android:text=""
+        android:text="WELCOME TO FITSY"
         android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,13 +27,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/pizzy" />
+        app:srcCompat="@drawable/chatbot" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:textAlignment="center"
         android:textColor="#000000"
