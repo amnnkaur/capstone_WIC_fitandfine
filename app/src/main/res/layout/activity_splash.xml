@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".SplashActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/selector_onboarding_background_color">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/activity_splash_imageview_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/watson_logo_bg2x" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/activity_splash_imageview_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/watson_logo_2x" />
+
+        <TextView
+            android:id="@+id/activity_splash_textview_name"
+            style="@style/ask_watson_page_title"
+            android:layout_marginTop="@dimen/margin_24dp" />
+
+        <TextView
+            android:id="@+id/activity_splash_textview_slogan"
+            style="@style/onboarding_page_subheading"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:text="@string/splash_slogan" />
+    </LinearLayout>
+</RelativeLayout>
