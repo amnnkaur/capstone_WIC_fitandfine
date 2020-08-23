@@ -7,6 +7,7 @@
     android:background="#FFFFFF"
     tools:context=".activities.chatbot.ChatBotActivity">
 
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
