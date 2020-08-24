@@ -16,28 +16,4 @@
         android:textSize="@dimen/font_subheading"
         app:text_font="@string/font_lato_regular" />
 
-    <include
-        android:id="@+id/layout_bottom_customer_care"
-        layout="@layout/layout_bottom_customer_care_help"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
-
-    <View
-        android:id="@+id/bottom_horizontal_separator"
-        style="@style/horizontal_separator.lightGray"
-        android:layout_above="@id/layout_bottom_customer_care"
-        android:layout_marginBottom="@dimen/margin_between_field" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/activity_personality_insights_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_horizontal_separator"
-        android:layout_below="@id/activity_personality_insights_title"
-        android:layout_marginLeft="@dimen/margin_extra_small"
-        android:layout_marginRight="@dimen/margin_extra_small"
-        android:layout_marginTop="@dimen/margin_big" />
-
-
 </RelativeLayout>

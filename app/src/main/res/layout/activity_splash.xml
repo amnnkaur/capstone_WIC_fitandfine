@@ -4,13 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/selector_onboarding_background_color">
 
-    <ImageView
-        android:id="@+id/activity_splash_imageview_large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/watson_logo_bg2x" />
 
     <LinearLayout
         android:layout_width="wrap_content"
