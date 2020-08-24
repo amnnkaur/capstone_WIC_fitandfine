@@ -24,6 +24,7 @@ import ai.api.android.AIDataService;
 import ai.api.model.AIRequest;
 import ai.api.model.AIResponse;
 
+
 public class ChatBotActivity extends AppCompatActivity {
 
     private static final String TAG = ChatBotActivity.class.getSimpleName();
