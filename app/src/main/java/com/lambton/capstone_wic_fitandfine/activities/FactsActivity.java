@@ -11,13 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lambton.capstone_wic_fitandfine.R;
+import com.lambton.capstone_wic_fitandfine.models.Facts;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FactsActivity extends AppCompatActivity {
 
-    private List<PainLevels> levelsList;
+    private List<Facts> levelsList;
     private RecyclerView recyclerView;
     private PainLevelsAdapter mAdapter;
 
@@ -48,37 +49,37 @@ public class FactsActivity extends AppCompatActivity {
     }
 
     private void prepareLevelsData() {
-        PainLevels level = new PainLevels(R.string.level_10,R.string.level_10_name, R.string.level_10_description,R.drawable.pain_level_8_10);
+        Facts level = new Facts(R.string.level_10,R.string.level_10_name, R.string.level_10_description,R.drawable.pain_level_8_10);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_9,R.string.level_9_name,R.string.level_9_description, R.drawable.pain_level_8_10);
+        level = new Facts(R.string.level_9,R.string.level_9_name,R.string.level_9_description, R.drawable.pain_level_8_10);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_8,R.string.level_8_name,R.string.level_8_description,R.drawable.pain_level_8_10);
+        level = new Facts(R.string.level_8,R.string.level_8_name,R.string.level_8_description,R.drawable.pain_level_8_10);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_7,R.string.level_7_name,R.string.level_7_description, R.drawable.pain_level_4_7);
+        level = new Facts(R.string.level_7,R.string.level_7_name,R.string.level_7_description, R.drawable.pain_level_4_7);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_6,R.string.level_6_name,R.string.level_6_description, R.drawable.pain_level_4_7);
+        level = new Facts(R.string.level_6,R.string.level_6_name,R.string.level_6_description, R.drawable.pain_level_4_7);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_5,R.string.level_5_name,R.string.level_5_description,R.drawable.pain_level_4_7);
+        level = new Facts(R.string.level_5,R.string.level_5_name,R.string.level_5_description,R.drawable.pain_level_4_7);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_4,R.string.level_4_name,R.string.level_4_description, R.drawable.pain_level_4_7);
+        level = new Facts(R.string.level_4,R.string.level_4_name,R.string.level_4_description, R.drawable.pain_level_4_7);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_3,R.string.level_3_name,R.string.level_3_description,R.drawable.pain_level_1_3);
+        level = new Facts(R.string.level_3,R.string.level_3_name,R.string.level_3_description,R.drawable.pain_level_1_3);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_2,R.string.level_2_name,R.string.level_2_description, R.drawable.pain_level_1_3);
+        level = new Facts(R.string.level_2,R.string.level_2_name,R.string.level_2_description, R.drawable.pain_level_1_3);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_1,R.string.level_1_name,R.string.level_1_description,R.drawable.pain_level_1_3);
+        level = new Facts(R.string.level_1,R.string.level_1_name,R.string.level_1_description,R.drawable.pain_level_1_3);
         levelsList.add(level);
 
-        level = new PainLevels(R.string.level_0,R.string.level_0_name,R.string.level_0_description,R.drawable.pain_level_0);
+        level = new Facts(R.string.level_0,R.string.level_0_name,R.string.level_0_description,R.drawable.pain_level_0);
         levelsList.add(level);
 
 
