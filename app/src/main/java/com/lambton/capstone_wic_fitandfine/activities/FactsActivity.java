@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lambton.capstone_wic_fitandfine.R;
+import com.lambton.capstone_wic_fitandfine.adapter.login.FactsAdapter;
 import com.lambton.capstone_wic_fitandfine.models.Facts;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class FactsActivity extends AppCompatActivity {
 
     private List<Facts> levelsList;
     private RecyclerView recyclerView;
-    private PainLevelsAdapter mAdapter;
+    private FactsAdapter mAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class FactsActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_about_pain_levels);
 
 
-        mAdapter = new PainLevelsAdapter(levelsList);
+        mAdapter = new FactsAdapter(levelsList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -91,7 +92,7 @@ public class FactsActivity extends AppCompatActivity {
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.about_pain_levels);
+        getSupportActionBar().setTitle("FACTS");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
