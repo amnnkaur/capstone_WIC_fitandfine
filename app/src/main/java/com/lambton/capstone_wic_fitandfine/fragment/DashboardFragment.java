@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
@@ -11,7 +12,7 @@ import com.lambton.capstone_wic_fitandfine.R;
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
 
-
+    ImageView about;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
