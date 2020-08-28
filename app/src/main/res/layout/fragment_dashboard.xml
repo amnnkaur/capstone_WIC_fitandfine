@@ -56,7 +56,7 @@
     <ScrollView
         android:id="@+id/scrollView_dashboard"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imageview_dashboard_toolbar_divider"
         android:background="@color/white"
         android:orientation="vertical">
@@ -162,8 +162,6 @@
                     app:progress_width="10dp" />
 
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -175,16 +173,12 @@
                 android:text="@string/dashboard_surveys" />
 
 
-
-
             <Button
-                android:id="@+id/btnFaq"
+                android:id="@+id/btnBlog"
                 style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/faq"
+                android:drawableLeft="@drawable/blog"
                 android:drawableRight="@drawable/chevron_grey"
-                android:text="FAQs" />
-
-
+                android:text="Blog" />
 
 
         </LinearLayout>

@@ -16,6 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="2dp"
         android:elevation="4dp">
+
     <com.google.android.material.tabs.TabItem
         android:id="@+id/tabItem_my_notes"
         android:layout_width="wrap_content"
@@ -27,7 +28,7 @@
         android:id="@+id/tabItem3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/facebook_icon"
+        android:icon="@drawable/letterf"
         android:text="@string/dashboard_tab_text_alerts" />
     <com.google.android.material.tabs.TabItem
         android:id="@+id/tabItem4"
