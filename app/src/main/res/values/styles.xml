@@ -125,7 +125,12 @@
     <style name="edit_text.gray" parent="edit_text">
         <item name="android:textColor">@color/dark_gray</item>
     </style>
-
+    <style name="MyStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
 
     <style name="button">
         <item name="android:layout_height">wrap_content</item>
