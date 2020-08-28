@@ -6,21 +6,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_log_pain"
+        android:id="@+id/toolbar_about"
         style="@style/top_toolbar_small"
-        android:layout_width="414dp"
-        android:layout_height="50dp"
-        android:background="@color/babypink"
-        tools:ignore="MissingConstraints"/>
+        app:contentInsetStart="0dp">
+
+        <TextView
+            style="@style/textView"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rale_bold"
+            android:text="Facts"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_extra_big" />
+
+        <TextView
+            android:id="@+id/textview_log_pain_cancel"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_back_iconb"
+            android:gravity="left"
+            tools:layout_editor_absoluteY="20dp" />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_about_pain_levels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/toolbar"
-        android:background="@color/white"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="54dp"
+        android:background="@color/white" />
 
 
 </RelativeLayout>
