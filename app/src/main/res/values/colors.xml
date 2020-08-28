@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#05B7D0</color>
-    <color name="colorPrimaryDark">#0F5F94</color>
-    <color name="accent_translucent">#CEE8EF</color>
+    <color name="colorPrimary">#BA98FA</color>
+    <color name="colorPrimaryDark">#BA98FA</color>
+    <color name="accent_translucent">#BA98FA</color>
 
 
     <color name="black_overlay">#66000000</color>
@@ -84,7 +84,7 @@
 
 
 
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#BA98FA</color>
     <color name="background">#F9F9F9</color>
     <color name="line">#EDEDED</color>
     <color name="chat_bg_color">#06ACC9</color>
@@ -99,7 +99,7 @@
     <color name="conventional_bg_color">#FEF9F2</color>
     <color name="physical_text_color">#01B1AB</color>
     <color name="physical_bg_color">#F2FBFB</color>
-
+    <color name="red">#ef5350</color>
     <color name="articles_bottom_bg">#F5F5F5</color>
     <color name="articles_bottom_textcolor">#56B5DE</color>
     <color name="grey">#C2C1C7</color>
@@ -117,5 +117,13 @@
     <color name="transparent">#00f12d2d</color>
     <color name="splashcolortrans">#4d050505</color>
     <color name="splash_chat_white_transFie">#6E4FAB</color>
+    <color name="bluez">#29B6F6</color>
+    <color name="greenz">#9CCC65</color>
+    <color name="redx">#ef5350</color>
+    <color name="gold_dark">#946335</color>
+    <color name="gold_med">#ab804b</color>
+    <color name="gold">#cea774</color>
+    <color name="gold_light">#edd3b2</color>
+    <color name="mfp">#147FCC</color>
 
 </resources>

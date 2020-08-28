@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_log_pain"
+        style="@style/top_toolbar_small"
+        android:background="@color/babypink"
+        app:contentInsetStart="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/textView"
+            android:layout_gravity="center"
+            android:fontFamily="@font/ralemedium"
+            android:text="Excercise"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_extra_big"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <TextView
+            android:id="@+id/textview_log_pain_cancel"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_back_iconb"
+            android:gravity="left"
+            tools:layout_editor_absoluteY="20dp" />
+
+
+        <TextView
+            android:id="@+id/textview_log_pain_done"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_action_save"
+            android:paddingRight="10dp"
+            tools:layout_editor_absoluteX="362dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
+        android:background="@color/bg_gray"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/viewpagertab"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clipToPadding="false"
+            android:focusable="false"
+            android:hapticFeedbackEnabled="false"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            app:stl_defaultTabTextColor="@color/white"
+            app:stl_defaultTabTextHorizontalPadding="18dp"
+            app:stl_dividerColor="@color/white"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorColor="@color/colorAccent"
+            app:stl_indicatorCornerRadius="18dp"
+            app:stl_indicatorGravity="center"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="36dp"
+            app:stl_underlineColor="@color/white"
+            app:stl_underlineThickness="0dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewpagertab">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="455dp"
+        android:clickable="true"
+        android:contentDescription="@string/add_exercise_button"
+        android:elevation="6dp"
+        android:focusable="true"
+        android:scaleType="center"
+        app:backgroundTint="@color/babypink"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/nav_purple"
+        app:srcCompat="@drawable/ic_muscle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

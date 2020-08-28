@@ -1,7 +1,8 @@
 <resources>
     <item name="visible" type="id" />
     <item name="masked" type="id" />
-    <string name="app_name">capstone_WIC_fitandfine</string>
+    <string name="app_name">Fit and Fine</string>
+
     <string name="app_authorities">ccom.lambton.capstone_wic_fitandfine</string>
 
 
@@ -14,15 +15,23 @@
     <string name="all_date">Date</string>
     <string name="all_next">Next</string>
     <string name="all_edit">Edit</string>
+    <string name="widget_background">widget background</string>
+    <string name="add_exercise_button">Add exercise button</string>
+    <string name="add_weight_fab_button">Add weight Fab button</string>
+    <string name="add_workout_fab_button">Add workout FAB button</string>
     <string name="all_pain_level">Pain Level</string>
     <string name="all_pain_type">Pain Type</string>
+    <string name="empty_image">empty image</string>
+    <string name="it_s_a_bit_lonely_here">It\'s a bit lonely here....</string>
+    <string name="get_started_by_adding_a_workout">Get started by adding a workout</string>
     <string name="all_pain_area">Pain Area</string>
     <string name="all_email">Email</string>
+    <string name="toast_check_connection">Please check your internet connection</string>
     <string name="all_submit">Submit</string>
     <string name="all_pain">Pain</string>
     <string name="all_medication">Medication</string>
     <string name="all_pain_history">Pain History</string>
-    <string name="all_my_therapies">My Therapies</string>
+    <string name="all_my_therapies">ChatBot</string>
     <string name="all_articles">Articles</string>
     <string name="all_therapies">Therapies</string>
     <string name="all_send">Send</string>
@@ -70,13 +79,14 @@
     <!-- Dashboard -->
     <string name="dashboard_activity_title">DashboardActivity</string>
     <string name="dashboard_tab_text_dashboard">Dashboard</string>
-    <string name="dashboard_tab_text_alerts">Alerts</string>
-    <string name="dashboard_tab_text_calendar">Calendar</string>
+    <string name="dashboard_tab_text_alerts">Facts</string>
+    <string name="dashboard_tab_text_calendar">FAQ</string>
     <string name="dashboard_surveys">Surveys</string>
     <string name="dashboard_personal_insights">Personal Insights</string>
     <string name="dashboard_progress">Progress</string>
     <string name="dashboard_forums">Forums</string>
     <string name="dashboard_blog">Blog</string>
+
 
     <!-- Therapies -->
     <string name="therapies_conventional">Conventional</string>
@@ -138,12 +148,14 @@
     <string name="privacy_policy">Privacy Policy</string>
 
     <!-- Log Pain -->
-    <string name="log_pain">Log Pain</string>
+    <string name="log_pain">WorkOut</string>
+    <string name="default_workout_sign">default workout sign</string>
     <string name="log_pain_level">Log Pain Level</string>
     <string name="log_pain_hows_your_pain">How is your pain today?</string>
-
+    <string name="delete_icon">delete icon</string>
+    <string name="edit_icon">edit icon</string>
     <!-- About -->
-    <string name="about">About</string>
+
     <string name="about_contact_us">Contact Us</string>
     <string name="about_welcome_fit_fine">Welcome to\nFit &amp; Fine</string>
     <string name="about_slogan">Making the world feel better without addiction</string>
@@ -288,13 +300,13 @@
     <string name="tab_text_dashboard">Dashboard</string>
     <string name="tab_text_alerts">Alerts</string>
     <string name="tab_text_calendar">Calendar</string>
-    <string name="action_settings">Settings</string>
+
     <string name="section_format">Hello World from section: %1$d</string>
 
     <!-- Dashboard -->
     <string name="surveys">Surveys</string>
     <string name="personal_insights">Personal Insights</string>
-    <string name="progress">Progress</string>
+
     <string name="forums">Forums</string>
     <string name="blog">Blog</string>
 
@@ -344,7 +356,7 @@
     <string name="type_message">Type message</string>
     <string name="select_cat">SELECT ALL CATEGORIES THAT APPLY</string>
     <string name="select_symptopms">SELECT ALL ITEMS THAT APPLY</string>
-    <string name="next">Next</string>
+
     <string name="category">Categories</string>
     <string name="locates">Items</string>
 
@@ -392,7 +404,7 @@
     <string name="survey_sub_desc1">Its quick and easy, get your wellness scores today. Go ahead and take your first survey.</string>
     <string name="survey_desc1">"Fit &amp; Fine Wellness Survey"</string>
     <string name="survey_desc2">"Lets start by rating how you have been feeling at the moment"</string>
-    <string name="zero">0</string>
+
     <string name="fifty">50</string>
     <string name="twenty">20</string>
     <string name="forty">40</string>
@@ -446,7 +458,7 @@
     <string name="add_medication">Add Medication</string>
     <string name="add_existing_condition">Add Pre-existing condition</string>
     <string name="add_supplement_vitamin">Add Supplement Vitamin</string>
-    <string name="delete">Delete</string>
+
     <string name="total_daily_dosage">TOTAL DAILY DOSAGE</string>
     <string name="medication_description">e.g. 50mg two times a day = 100mg</string>
     <string name="allergies">Allergies</string>
@@ -513,5 +525,119 @@ is breakdown of the various ways you can earn points.</string>
     <string name="inchescntant"> in</string>
 
     <string name="last_updated">Last Updated: %s</string>
+
+    <string name="action_settings">Setting</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="reg">Don\'t have an account? <b>Sign Up</b></string>
+    <string name="signup">Sign Up</string>
+
+    <string name="nutrition"><![CDATA[Nutrition & Macros]]></string>
+    <string name="progress">Progress</string>
+    <string name="about">About</string>
+    <string name="program_builder">Program Manager</string>
+    <string name="home">Home</string>
+    <string name="sarahha_eren">Sarrah Eren</string>
+    <string name="sarraheren_gmail_com">SarrahEren@gmail.com</string>
+    <string name="welcome">Welcome Back</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="workout_training_level">Workout Training Level</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="workout_type">Workout Type</string>
+    <string name="weekly_days">Weekly Days</string>
+    <string name="chest_trans">chest</string>
+    <string name="back_trans">back</string>
+    <string name="legs_trans">legs</string>
+    <string name="triceps_trans">triceps</string>
+    <string name="biceps_trans">biceps</string>
+    <string name="shoulder_trans">shoulder</string>
+    <string name="abs_trans">abs</string>
+    <string name="cardio_trans">cardio</string>
+    <string name="crossfit_trans">crossfit</string>
+    <string name="delete">DELETE</string>
+    <string name="lets_calculate_together">LETS CALCULATE TOGETHER!</string>
+    <string name="tdee_total_daily_energy_expenditure">TDEE : Total Daily Energy Expenditure</string>
+    <string name="my_age_is">My Age Is</string>
+    <string name="my_height_is">My Height Is</string>
+    <string name="my_weight_is">My Weight Is</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="describe_your_daily_activity_level">Describe Your Daily Activity Level</string>
+    <string name="days_per_week">Days Per Week</string>
+    <string name="how_intense_is_your_exercise">How Intense Is Your Exercise</string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name="your_tdee_is">Your TDEE Is</string>
+    <string name="please_select_your_goal">Please Select Your Goal</string>
+    <string name="to_reach_your_goal_you_will_need_to_consume">To reach your goal, you will need to consume</string>
+    <string name="calories">\u0020Calories</string>
+    <string name="calories_from_protein">Calories from Protein\u0020</string>
+    <string name="grams">\u0020 grams</string>
+    <string name="calories_from_fat">Calories from fat\u0020</string>
+    <string name="swirl">\u0020~\u0020</string>
+    <string name="scrub_empty">Tap and hold the graph to scrub.</string>
+    <string name="scrub_format">Weight: %1$s</string>
+    <string name="calories_from_carbs">Calories from Carbs\u0020</string>
+
+    <string name="_1y">1Y</string>
+    <string name="_1m">1M</string>
+    <string name="_1w">1W</string>
+    <string name="sign">-</string>
+    <string name="add">Add</string>
+    <string name="next">NEXT</string>
+    <string name="let_s_name_your_workout_days">Let\'s Name your workout days</string>
+    <string name="name">name</string>
+    <string name="your_current_calorie_instake_is">Your current daily calorie intake is</string>
+    <string name="please_calc">Please calculate your macros</string>
+    <string name="set_default">Set Default</string>
+    <string name="fitz_fitness_lifestyle"><![CDATA[Fitz - Fitness & Lifestyle]]></string>
+    <string name="vyvital">vyvital</string>
+    <string name="save">save</string>
+    <string name="zero">0</string>
+    <string name="name2">Name</string>
+    <string name="program">Program</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="ok">OK</string>
+    <string name="faq">FAQ</string>
+    <string name="version_1_0_0">Version 1.0.0</string>
+    <string name="_1234">1234</string>
+    <string name="day_1">Day 1</string>
+    <string name="day_2">Day 2</string>
+    <string name="day_3">Day 3</string>
+    <string name="day_4">Day 4</string>
+    <string name="day_5">Day 5</string>
+    <string name="day_6">Day 6</string>
+    <string name="day_7">Day 7</string>
+    <string name="success">Success</string>
+    <string name="we_ll_see_you_soon">We\'ll see you soon!</string>
+    <string name="myfitnesspal">myfitnesspal</string>
+    <string name="kg">Kg</string>
+    <string name="_234234">234234</string>
+    <string name="temp_name">Temp name</string>
+    <string name="reps">reps -</string>
+
+    <string name="toast_logged_out">Logged out successfully</string>
+    <string name="toast_make_sure">Please Make Sure Your Input is Correct</string>
+    <string name="toast_save">Your changes were successfully saved!</string>
+    <string name="next_day">next day</string>
+    <string name="start_workout_button">start workout button</string>
+
+    <string name="adding_exercise_to_workout_image">adding exercise to workout image</string>
+    <string name="background_image">background image</string>
+    <string name="app_icon">App icon</string>
+
+    <string name="body_part_image">body part image</string>
+    <string name="developer_image">Developer image</string>
+    <string name="github_icon">github icon</string>
+    <string name="linkedin_icon">linkedin icon</string>
+
+    <string name="success_image_not_a_button">Success image - not a button</string>
+    <string name="pick_workout">Pick a workout</string>
+    <string name="dont_forget_me">Don\'t forget me!</string>
+    <string name="removed_from_workouts">&#160;removed from workouts!</string>
+    <string name="was_added">&#160;was added!</string>
 </resources>
 

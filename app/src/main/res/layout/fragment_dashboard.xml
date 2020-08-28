@@ -1,16 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_dashboard"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/toolbar_background"
+        android:background="@color/babypink"
         app:contentInsetStart="0dp">
 
         <RelativeLayout
@@ -32,8 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="@font/rale_bold"
-                android:text="Fit and Fine"
-                android:textColor="@color/generic_text_color"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
                 android:textSize="@dimen/font_extra_big" />
 
             <ImageView
@@ -82,28 +79,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_end="197dp" />
+                    app:layout_constraintGuide_percent="0.5" />
 
 
                 <ImageView
-                    android:id="@+id/imageview_dashboard_log_pain"
+                    android:id="@+id/imageview_dashboard_workout"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginRight="@dimen/margin_extra_small"
-
+                    android:src="@drawable/test1"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/guideline_dashboard_vertical"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/curve_yellow" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageview_dashboard_pain_areas"
+                    android:id="@+id/imageview_dashboard_Nut"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginLeft="@dimen/margin_extra_small"
-                    app:srcCompat="@drawable/curve_yellow"
+                    android:src="@drawable/messu"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintLeft_toRightOf="@id/guideline_dashboard_vertical"
@@ -114,14 +110,14 @@
                     android:id="@+id/imageview_dashboard_history"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/margin_small"
                     android:layout_marginRight="@dimen/margin_extra_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:src="@drawable/history"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:srcCompat="@drawable/curve_yellow"
                     app:layout_constraintRight_toLeftOf="@id/guideline_dashboard_vertical"
-                    app:layout_constraintTop_toBottomOf="@id/imageview_dashboard_log_pain" />
+                    app:layout_constraintTop_toBottomOf="@id/imageview_dashboard_workout" />
 
                 <ImageView
                     android:id="@+id/imageview_dashboard_notes"
@@ -129,56 +125,42 @@
                     android:layout_height="0dp"
                     android:layout_marginLeft="@dimen/margin_extra_small"
                     android:layout_marginTop="@dimen/margin_small"
+                    android:src="@drawable/notes"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
-                    app:srcCompat="@drawable/curve_yellow"
                     app:layout_constraintLeft_toRightOf="@id/guideline_dashboard_vertical"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imageview_dashboard_pain_areas" />
+                    app:layout_constraintTop_toBottomOf="@id/imageview_dashboard_Nut" />
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageview_dashboard_start"
+                    android:layout_width="120dp"
+                    android:layout_height="0dp"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:focusable="true"
+                    android:src="@drawable/start"
+                    app:layout_constraintBottom_toBottomOf="@id/imageview_dashboard_history"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imageview_dashboard_Nut" />
+
+                <com.natasa.progressviews.CircleSegmentBar
+                    android:id="@+id/segment_bar"
                     android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="28dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/imageview_dashboard_notes"
-                    app:layout_constraintTop_toTopOf="@+id/imageview_dashboard_notes"
-                    app:srcCompat="@drawable/diet" />
+                    android:layout_height="0dp"
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="28dp"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline_dashboard_vertical"
-                    app:layout_constraintStart_toStartOf="@+id/imageview_dashboard_history"
-                    app:layout_constraintTop_toBottomOf="@+id/imageview_dashboard_log_pain"
-                    app:srcCompat="@drawable/progress1" />
+                    android:elevation="16dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/imageview_dashboard_history"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imageview_dashboard_Nut"
+                    app:progress_color="#f77630"
+                    app:progress_width="10dp" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="PROGRESS"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline_dashboard_vertical"
-                    app:layout_constraintStart_toStartOf="@+id/imageview_dashboard_history"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="DIET PLAN"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/imageview_dashboard_notes"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -228,5 +210,4 @@
 
 
     </ScrollView>
-
 </RelativeLayout>

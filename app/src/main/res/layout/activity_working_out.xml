@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WorkingOutActivity"
+    tools:ignore="MissingClass">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_log_pain"
+        style="@style/top_toolbar_small"
+        android:background="@color/babypink"
+        app:contentInsetStart="0dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/textView"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:text="Excercise"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_extra_big"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <TextView
+            android:id="@+id/textview_log_pain_cancel"
+            style="@style/textView"
+            android:layout_gravity="left"
+            android:text="@string/all_cancel"
+            android:paddingLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_extra_big"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+        <TextView
+            android:id="@+id/textview_log_pain_done"
+            style="@style/textView"
+            android:layout_gravity="right"
+            android:paddingRight="10dp"
+            android:text="Save"
+            android:textAppearance="@style/bold_textview_small"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_extra_big"
+            tools:layout_editor_absoluteX="349dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@color/bg_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/miniLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/greenz"
+                android:elevation="4dp"
+                android:fontFamily="@font/quickbold"
+                android:text="@string/start"
+                android:textColor="#FFFFFF"
+                android:theme="@style/ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="4dp"
+                android:fontFamily="@font/raleregular"
+                android:text="@string/pause"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonStyle" />
+
+        </LinearLayout>
+
+        <Chronometer
+            android:id="@+id/chrono"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/rale_bold"
+            android:format="0:00:0"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="54sp" />
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/babypink"
+            android:text="@string/done"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

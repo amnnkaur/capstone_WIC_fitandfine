@@ -8,10 +8,10 @@
         <!-- colorPrimary is used for the default action bar background -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <!-- colorPrimaryDark is used for the status bar -->
-        <item name="colorPrimaryDark">@color/background_dark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!-- colorAccent is used as the default value for colorControlActivated,
             which is used to tint widgets -->
-        <item name="colorAccent">@color/blue_button</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="FullHeightDialog" parent="android:style/Theme.Dialog">
@@ -476,6 +476,12 @@
     <style name="AppTheme.GrayStatusBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimaryDark">@color/chat_bg_color</item>
     </style>
+    <style name="ButtonStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">14sp</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
 
 
     <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
@@ -592,8 +598,8 @@
     </style>
 
     <style name="switchThemeBlue" parent="Theme.AppCompat.Light">
-        <item name="colorControlActivated">@color/accent_blue</item>
-        <item name="android:textColorPrimary">@color/selector_log_pain_switch_text</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 
     <style name="editTextBox">
