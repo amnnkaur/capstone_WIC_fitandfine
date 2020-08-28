@@ -157,12 +157,7 @@ public class ExerciseActivity  extends AppCompatActivity implements View.OnClick
         DatabaseReference mRef = mDatabase.getReference("Users").child(mAuth.getCurrentUser().getUid()).child("workouts");
         mRef.keepSynced(true);
         mRef.child(String.valueOf(ex.getId())).setValue(ex);
-
         showAlert("Your changes were successfully saved!");
-
-       //Toast.makeText(this, R.string.toast_save, Toast.LENGTH_SHORT).show();
-
-       // startActivity(new Intent(ExerciseActivity.this, WorkOutActivity.class));
     }
     private void showAlert(String message) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

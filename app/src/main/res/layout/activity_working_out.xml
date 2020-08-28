@@ -23,29 +23,13 @@
             android:textSize="@dimen/font_extra_big"
             tools:layout_editor_absoluteX="166dp"
             tools:layout_editor_absoluteY="14dp" />
-
-        <TextView
-            android:id="@+id/textview_log_pain_cancel"
-            style="@style/textView"
-            android:layout_gravity="left"
-            android:text="@string/all_cancel"
-            android:paddingLeft="10dp"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/font_extra_big"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="14dp" />
-
         <TextView
             android:id="@+id/textview_log_pain_done"
-            style="@style/textView"
-            android:layout_gravity="right"
-            android:paddingRight="10dp"
-            android:text="Save"
-            android:textAppearance="@style/bold_textview_small"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/font_extra_big"
-            tools:layout_editor_absoluteX="349dp"
-            tools:layout_editor_absoluteY="14dp" />
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_back_iconb"
+            android:gravity="left"
+            tools:layout_editor_absoluteY="20dp" />
 
     </androidx.appcompat.widget.Toolbar>
 

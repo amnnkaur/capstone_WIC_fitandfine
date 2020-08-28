@@ -3,17 +3,13 @@ package com.lambton.capstone_wic_fitandfine.application;
 import android.app.Application;
 import android.content.Context;
 
-public class FAFApplication extends Application {
+import com.google.firebase.database.FirebaseDatabase;
 
-    private static Context mContext;
+public class FAFApplication extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mContext = this;
-    }
-
-    public static Context getContext() {
-        return mContext;
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
     }
 }

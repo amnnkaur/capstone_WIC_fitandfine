@@ -13,6 +13,7 @@
     <TextView
         android:id="@+id/activity_welcome_title"
         style="@style/onboarding_page_title"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/rale_bold"
         android:text="@string/register_welcome"
         android:textColor="@color/nav_purple" />

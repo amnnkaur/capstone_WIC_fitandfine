@@ -61,14 +61,6 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_working_out);
-       // mAdView = findViewById(R.id.banner);
-       // AdRequest adRequest = new AdRequest.Builder().build();
-       // mAdView.loadAd(adRequest);
-        ActionBar ab = getSupportActionBar();
-
-    //        ab.setTitle(getResources().getString(R.string.app_name));
-        BitmapDrawable backgrd = new BitmapDrawable(BitmapFactory.decodeResource(getResources(), R.drawable.bar));
-//        getSupportActionBar().setBackgroundDrawable(backgrd);
         final Resources res = getResources();
         quotes = res.getStringArray(R.array.quotes);
         size = res.getDimensionPixelSize(R.dimen.default_confetti_size);
@@ -100,6 +92,13 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
                 }
             }
         });
+        TextView ca = findViewById(R.id.textview_log_pain_done);
+        ca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,6 +126,8 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
             for (int setNum = 0; setNum < day.getExercises().get(ex).getSets().size(); setNum++)
                 total = total + 1;
         finished = new Dialog(this);
+
+
     }
 
     @Override
@@ -145,7 +146,7 @@ public class WorkingOutActivity extends AppCompatActivity implements ConfettoGen
         finished.setContentView(R.layout.complete);
         constraintLayout = finished.findViewById(R.id.dialogLayout);
         container = finished.findViewById(R.id.dialogLayout);
-        finished.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+       // finished.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         constraintLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
