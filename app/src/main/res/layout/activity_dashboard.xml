@@ -28,7 +28,7 @@
             android:id="@+id/tabItem_care_provider_notes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/forum"
+            android:icon="@drawable/chatboticon"
             android:text="@string/all_my_therapies" />
 
         <com.google.android.material.tabs.TabItem
