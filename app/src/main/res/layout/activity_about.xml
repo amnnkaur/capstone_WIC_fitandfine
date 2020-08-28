@@ -13,8 +13,9 @@
         <TextView
             style="@style/textView"
             android:layout_gravity="center"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/rale_bold"
             android:text="@string/about"
+            android:textColor="#FFFFFF"
             android:textSize="@dimen/font_extra_big" />
 
         <TextView

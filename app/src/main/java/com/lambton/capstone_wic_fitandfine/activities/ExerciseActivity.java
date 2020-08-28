@@ -46,8 +46,6 @@ public class ExerciseActivity  extends AppCompatActivity implements View.OnClick
         TextView s = findViewById(R.id.textView);
         b = getIntent().getExtras();
         ex = b.getParcelable("workout");
-       // System.out.println("naaa"+ex.getName());
-     //    s.setText(ex.getName());
         fab = findViewById(R.id.fab);
         final ViewPager viewPager = findViewById(R.id.pager);
         SmartTabLayout viewPagerTab = findViewById(R.id.viewpagertab);
