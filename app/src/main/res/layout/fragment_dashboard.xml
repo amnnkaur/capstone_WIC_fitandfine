@@ -99,7 +99,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginLeft="@dimen/margin_extra_small"
-                    android:src="@drawable/messu"
+                    android:src="@drawable/macros"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintLeft_toRightOf="@id/guideline_dashboard_vertical"
@@ -112,7 +112,7 @@
                     android:layout_height="0dp"
                     android:layout_marginRight="@dimen/margin_extra_small"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:src="@drawable/history"
+                    android:src="@drawable/messu"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -125,7 +125,7 @@
                     android:layout_height="0dp"
                     android:layout_marginLeft="@dimen/margin_extra_small"
                     android:layout_marginTop="@dimen/margin_small"
-                    android:src="@drawable/notes"
+                    android:src="@drawable/chatbot1"
                     app:layout_constraintDimensionRatio="H, 125:128"
                     app:layout_constraintHorizontal_chainStyle="spread"
                     app:layout_constraintLeft_toRightOf="@id/guideline_dashboard_vertical"
@@ -193,10 +193,11 @@
             <ImageView style="@style/imageView.divider" />
 
             <Button
+                android:id="@+id/btnFaq"
                 style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/forum"
+                android:drawableLeft="@drawable/faq"
                 android:drawableRight="@drawable/chevron_grey"
-                android:text="@string/dashboard_forums" />
+                android:text="FAQs" />
 
             <ImageView style="@style/imageView.divider" />
 

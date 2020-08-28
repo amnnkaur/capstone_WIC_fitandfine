@@ -70,7 +70,7 @@ public class ChatBotActivity extends AppCompatActivity {
     }
 
     private void initChatbot() {
-        final AIConfiguration config = new AIConfiguration("e194dd6256564e10a03f2e07db49619d",
+        final AIConfiguration config = new AIConfiguration("",
                 AIConfiguration.SupportedLanguages.English,
                 AIConfiguration.RecognitionEngine.System);
 

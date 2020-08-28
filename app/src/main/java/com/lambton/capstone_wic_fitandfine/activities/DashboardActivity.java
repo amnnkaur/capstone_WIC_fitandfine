@@ -2,6 +2,7 @@ package com.lambton.capstone_wic_fitandfine.activities;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -112,7 +113,7 @@ public class DashboardActivity extends AppCompatActivity implements ICallBackWee
                 case 0:
                     return new DashboardFragment();
                 case 1:
-                   // return new ChatBotWelcomActivity();
+                    //startActivity(new Intent(new DashboardActivity(), ProgressActivity.class));
                 case 2:
                     return new DashboardFragment();
                 case 3:
