@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             android:layout_gravity="left|top"
             android:layout_marginLeft="@dimen/margin_between_field"
             android:text="@string/all_close"
-            android:textColor="#BA98FA"
+            android:textColor="@color/accent_blue"
             android:textSize="@dimen/font_subheading" />
 
 
@@ -42,6 +41,7 @@
         android:layout_below="@id/imageview_profile_user"
         android:background="@color/toolbar_background"
         android:gravity="center_horizontal"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="25sp" />
 
@@ -98,17 +98,97 @@
 
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_badge_progression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_profile_member_info"
+        android:background="@color/toolbar_background"
+        android:paddingBottom="@dimen/margin_extra_small"
+        android:paddingTop="@dimen/margin_extra_small">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_24dp"
+            android:layout_marginRight="@dimen/margin_24dp"
+            android:progress="0"
+            android:progressBackgroundTint="@color/progressbar_bg"
+            android:progressTint="@color/accent_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_badge1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_between_field"
+            android:src="@drawable/badge2x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageview_badge3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drawable_white_cirlce"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_badge2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drawable_white_cirlce"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageview_badge1"
+            app:layout_constraintRight_toLeftOf="@id/imageview_badge3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_badge5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_between_field"
+            android:src="@drawable/drawable_white_cirlce"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_badge4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drawable_white_cirlce"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageview_badge3"
+            app:layout_constraintRight_toLeftOf="@id/imageview_badge5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:id="@+id/texview_profile_points_to_level"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layout_profile_member_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_badge_progression"
         android:background="@color/toolbar_background"
         android:gravity="center_horizontal"
         android:padding="@dimen/margin_extra_small"
         android:textColor="@color/text_light_gray"
-        android:textSize="@dimen/font_caption" />
+        android:textSize="@dimen/font_caption"
+        android:text="--- Points to Level"/>
 
     <TextView
         android:id="@+id/textview_profile_learn_more"
@@ -119,7 +199,7 @@
         android:gravity="center_horizontal"
         android:padding="@dimen/margin_extra_small"
         android:text="Learn more about badge levels"
-        android:textColor="#BA98FA"
+        android:textColor="@color/accent_blue"
         android:textSize="@dimen/font_caption"
         android:textStyle="bold" />
 
@@ -145,7 +225,7 @@
                 android:gravity="center_horizontal"
                 android:padding="@dimen/margin_between_field"
                 android:text="Refer a Friend"
-                android:textColor="#BA98FA"
+                android:textColor="@color/accent_blue"
                 android:textSize="@dimen/font_subheading" />
 
             <ImageView style="@style/imageView.divider" />
@@ -178,206 +258,6 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/chevron_grey" />
             </RelativeLayout>
-
-            <ImageView
-                style="@style/imageView.divider"
-                android:layout_marginLeft="@dimen/margin_between_field" />
-
-            <RelativeLayout
-                android:id="@+id/layout_profile_my_physicians"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_between_field">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:text="@string/my_physicians"
-                    android:textColor="@color/generic_text_color"
-                    android:textSize="@dimen/font_subheading" />
-
-                <ImageView
-                    android:id="@+id/imageview_profile_physicians_chevron"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_grey" />
-
-                <TextView
-                    android:id="@+id/textview_profile_my_physicians_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_toLeftOf="@id/imageview_profile_physicians_chevron"
-                    />
-
-
-            </RelativeLayout>
-
-            <ImageView style="@style/imageView.divider" />
-
-            <TextView
-                style="@style/textView.light_gray.section_header"
-                android:text="@string/profile_medical"
-                android:textSize="13sp"/>
-
-            <ImageView style="@style/imageView.divider" />
-
-            <RelativeLayout
-                android:id="@+id/layout_profile_allergies"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_between_field">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:text="@string/profile_allergies"
-                    android:textColor="@color/generic_text_color"
-                    android:textSize="@dimen/font_subheading" />
-
-                <ImageView
-                    android:id="@+id/imageview_profile_allergies_chevron"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_grey" />
-
-                <TextView
-                    android:id="@+id/textview_profile_allergies_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_toLeftOf="@id/imageview_profile_allergies_chevron"
-                    />
-
-
-            </RelativeLayout>
-
-            <ImageView
-                style="@style/imageView.divider"
-                android:layout_marginLeft="@dimen/margin_between_field" />
-
-
-            <RelativeLayout
-                android:id="@+id/layout_profile_preexisting_conditions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_between_field">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:text="@string/profile_preexisting_conditions"
-                    android:textColor="@color/generic_text_color"
-                    android:textSize="@dimen/font_subheading" />
-
-                <ImageView
-                    android:id="@+id/imageview_profile_preexisting_conditions_chevron"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_grey" />
-
-                <TextView
-                    android:id="@+id/textview_profile_preexisting_conditions_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_toLeftOf="@id/imageview_profile_preexisting_conditions_chevron"
-                    />
-
-
-            </RelativeLayout>
-
-            <ImageView
-                style="@style/imageView.divider"
-                android:layout_marginLeft="@dimen/margin_between_field" />
-
-
-            <RelativeLayout
-                android:id="@+id/layout_profile_medications"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_between_field">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:text="@string/profile_medications"
-                    android:textColor="@color/generic_text_color"
-                    android:textSize="@dimen/font_subheading" />
-
-                <ImageView
-                    android:id="@+id/imageview_profile_medications_chevron"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_grey" />
-
-                <TextView
-                    android:id="@+id/textview_profile_medications_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_toLeftOf="@id/imageview_profile_medications_chevron"
-                    />
-
-
-            </RelativeLayout>
-
-            <ImageView
-                style="@style/imageView.divider"
-                android:layout_marginLeft="@dimen/margin_between_field" />
-
-
-            <RelativeLayout
-                android:id="@+id/layout_profile_supplements"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_between_field">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:text="@string/profile_supplements_vitamins"
-                    android:textColor="@color/generic_text_color"
-                    android:textSize="@dimen/font_subheading" />
-
-                <ImageView
-                    android:id="@+id/imageview_profile_supplements_chevron"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_grey" />
-
-                <TextView
-                    android:id="@+id/textview_profile_supplements_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_small"
-                    android:layout_toLeftOf="@id/imageview_profile_supplements_chevron"
-                    />
-
-
-            </RelativeLayout>
-
-            <ImageView style="@style/imageView.divider" />
-
-            <TextView
-                style="@style/textView.light_gray.section_header"
-                android:padding="@dimen/margin_small" />
-
 
         </LinearLayout>
 

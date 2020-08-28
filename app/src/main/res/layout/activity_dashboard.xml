@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
         android:elevation="4dp">
 
         <com.google.android.material.tabs.TabItem
@@ -27,7 +28,7 @@
             android:id="@+id/tabItem_care_provider_notes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/selector_my_therapies_tab"
+            android:icon="@drawable/forum"
             android:text="@string/all_my_therapies" />
 
         <com.google.android.material.tabs.TabItem
@@ -41,8 +42,8 @@
             android:id="@+id/tabItem4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/selector_calendar_tab"
-            android:text="@string/dashboard_tab_text_calendar" />
+            android:icon="@drawable/faq"
+            android:text="FAQ" />
 
     </com.google.android.material.tabs.TabLayout>
 
