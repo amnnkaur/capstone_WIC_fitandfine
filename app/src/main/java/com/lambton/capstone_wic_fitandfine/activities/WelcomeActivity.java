@@ -29,7 +29,8 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             switch (view.getId()){
                 case R.id.activity_welcome_get_started:
                     Log.d("WelcomeActivity", "CLICKED");
-                    startedButtonClicked();
+                    startActivity(new Intent(this,
+                            LoginActivity.class));
                     break;
                 case R.id.activity_welcome_log_in:
                  //   NavUtils.navigateUpFromSameTask(this);

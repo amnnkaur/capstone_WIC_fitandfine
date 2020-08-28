@@ -45,7 +45,8 @@
         style="@style/onboarding_page_subheading"
         android:layout_marginTop="@dimen/margin_24dp"
         android:text="@string/register_welcome_have_account"
-        android:textSize="@dimen/font_body" />
+        android:textSize="@dimen/font_body"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/activity_welcome_log_in"
@@ -54,5 +55,6 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/register_welcome_log_in_now" />
+        android:text="@string/register_welcome_log_in_now"
+        android:visibility="invisible" />
 </LinearLayout>
