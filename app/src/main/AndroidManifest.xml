@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="true">
+        <activity android:name=".activities.BlogActivity">
+
+        </activity>
         <activity android:name=".activities.SurveyQuestionFiveActivity"></activity>
     <activity android:name=".activities.SurveyQuestionFourActivity" />
     <activity android:name=".activities.SurveyQuestionThreeActivity" />

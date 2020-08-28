@@ -66,6 +66,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     private ImageView mstart;
     private ImageView mImgProfile;
     private ImageView mAbout;
+    private Button mBlog;
     private Button btnSurveyList;
     private Button btnFaq;
 
@@ -92,7 +93,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     public DashboardFragment() {
     }
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint({"ClickableViewAccessibility", "WrongViewCast"})
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         day = 0;
@@ -113,6 +114,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         btnSurveyList.setOnClickListener(this);
         mAbout = (ImageView) getView().findViewById(R.id.imageview_dashboard_about);
         mAbout.setOnClickListener(this);
+        mBlog = (Button) getView().findViewById(R.id.btnBlog);
+        mBlog.setOnClickListener(this);
         mHandler = new Handler();
         segmentBar = (CircleSegmentBar)getView().findViewById(R.id.segment_bar);
 

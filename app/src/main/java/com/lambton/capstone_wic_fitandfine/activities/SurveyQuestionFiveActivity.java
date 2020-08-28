@@ -22,7 +22,7 @@ public class SurveyQuestionFiveActivity extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-            showAlert("Your Physical and mental welness score will be mailed to you shortly.");
+            showAlert("Your Physical and mental welness score will be trainner to you shortly.");
 
             }
         });
