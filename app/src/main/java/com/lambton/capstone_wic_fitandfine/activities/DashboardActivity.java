@@ -16,6 +16,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.lambton.capstone_wic_fitandfine.R;
+import com.lambton.capstone_wic_fitandfine.activities.chatbot.ChatBotWelcomActivity;
 import com.lambton.capstone_wic_fitandfine.fragment.DashboardFragment;
 
 import java.util.ArrayList;
@@ -111,7 +112,7 @@ public class DashboardActivity extends AppCompatActivity implements ICallBackWee
                 case 0:
                     return new DashboardFragment();
                 case 1:
-                  //  return new MyTherapiesFragment();
+                   // return new ChatBotWelcomActivity();
                 case 2:
                     return new DashboardFragment();
                 case 3:
