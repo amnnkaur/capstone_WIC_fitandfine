@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:textSize="18sp"
-            android:text="1/5"
+            android:text="4/5"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -43,7 +43,7 @@
             android:scaleWidth="100%"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="72dp"
-            android:progress="1"
+            android:progress="4"
             android:progressBackgroundTint="#BA98FA"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -82,7 +82,7 @@
             android:textSize="30sp"
             android:layout_marginLeft="20sp"
             android:textAlignment="center"
-            android:text="How would you rate your ability to breathe freely?"
+            android:text="How would you rate your ability to return to work or usual home activities?"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -99,6 +99,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/value_txt" />
 
+
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
@@ -112,7 +113,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/value_txt" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

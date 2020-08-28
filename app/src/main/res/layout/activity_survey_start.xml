@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#ffffff"
     tools:context=".activities.SurveyStartActivity">
 
     <include
@@ -35,7 +35,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:paddingLeft="16dp"
-        android:textColor="@color/white"
+        android:textColor="#BA98FA"
         android:paddingRight="16dp"
         android:text="@string/survey_desc2"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -51,7 +51,7 @@
         android:layout_margin="@dimen/spacing_medium"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="#BA98FA"
         android:text="@string/survey_sub_desc2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintLeft_toLeftOf="parent"
