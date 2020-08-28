@@ -16,37 +16,31 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="2dp"
         android:elevation="4dp">
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem_my_notes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/dashboard_inactive"
-            android:text="@string/dashboard_tab_text_dashboard" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem_care_provider_notes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/forum"
-            android:text="@string/all_my_therapies" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/selector_alerts_tab"
-            android:text="@string/dashboard_tab_text_alerts" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabItem4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/faq"
-            android:text="FAQ" />
-
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabItem_my_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/dashboard_inactive"
+        android:text="@string/dashboard_tab_text_dashboard" />
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabItem_care_provider_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/chatboticon"
+        android:text="@string/all_my_therapies" />
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabItem3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/facebook_icon"
+        android:text="@string/dashboard_tab_text_alerts" />
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabItem4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/faq"
+        android:text="FAQ" />
     </com.google.android.material.tabs.TabLayout>
-
     <ImageView
         style="@style/imageView.divider"
         android:id="@+id/imageview_dashboard_tab_divider"
