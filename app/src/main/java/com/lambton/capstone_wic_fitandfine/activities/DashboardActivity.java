@@ -1,6 +1,8 @@
 package com.lambton.capstone_wic_fitandfine.activities;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 
@@ -122,6 +124,7 @@ public class DashboardActivity extends AppCompatActivity implements ICallBackWee
 
         @Override
         public int getCount() {
+
             // Show 4 total pages.
             return 4;
         }
