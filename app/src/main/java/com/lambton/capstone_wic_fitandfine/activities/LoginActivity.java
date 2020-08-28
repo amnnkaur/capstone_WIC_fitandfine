@@ -1,6 +1,7 @@
 package com.lambton.capstone_wic_fitandfine.activities;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -23,6 +24,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.CallbackManager;
@@ -131,6 +133,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
     Facebook facedata;
     private String currentDate;
     private List<Workout> workoutList;
+    AlertDialog alert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -216,6 +219,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
                     //Toast.makeText(MainActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
                     displayAlert("All fileds are required", ll_splash);
+                   // showAlert("All fileds are required");
                 } else {
                     displaydialog("Loading please wait....");
                     auth.signInWithEmailAndPassword(txt_email, txt_password)
@@ -233,12 +237,14 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
                                         startActivity(intent);
 
                                         //Toast.makeText(MainActivity.this, "Login successfully", Toast.LENGTH_SHORT).show();
-                                        displayAlert("Login successfully", ll_splash);
+                                       // displayAlert("Login successfully", ll_splash);
+
                                         finish();
                                     } else {
                                         dialog.dismiss();
                                         //Toast.makeText(MainActivity.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
                                         displayAlert("Authentication failed!", ll_splash);
+                                        //showAlert("Authentication failed!");
                                     }
                                 }
                             });
@@ -393,9 +399,6 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
                         Log.d("TESTING", "User profile updated.");
-
-                        String currentuserid = user.getUid();
-
                         FirebaseUser user = auth.getCurrentUser();
                         String UserID = user.getEmail().replace("@", "").replace(".", "");
 
@@ -403,7 +406,6 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
                         DatabaseReference ref1 = mRootRef.child("Users").child(UserID);
 
                         ref1.child("Name").setValue(edt_name_reg.getText().toString().trim());
-                      //  ref1.child("Image_Url").setValue("Null");
                         ref1.child("Email").setValue(user.getEmail());
                         ref1.child("userID").setValue(user.getUid());
                         ref1.child("dateReg").setValue(currentDate);
@@ -417,6 +419,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
 
                         startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
                         // Toast.makeText(MainActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                        //showAlert("Registered successfully");
                         displayAlert("Registered successfully", ll_splash);
                         dialog.dismiss();
                     }
@@ -424,7 +427,6 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
             });
         }
     }
-
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
