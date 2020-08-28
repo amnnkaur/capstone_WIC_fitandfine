@@ -33,10 +33,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.lambton.capstone_wic_fitandfine.R;
 import com.lambton.capstone_wic_fitandfine.activities.AboutActivity;
+import com.lambton.capstone_wic_fitandfine.activities.FAQActivity;
 import com.lambton.capstone_wic_fitandfine.activities.NutriActivity;
+import com.lambton.capstone_wic_fitandfine.activities.ProfileActivity;
 import com.lambton.capstone_wic_fitandfine.activities.ProgressActivity;
+import com.lambton.capstone_wic_fitandfine.activities.SurveyStartActivity;
 import com.lambton.capstone_wic_fitandfine.activities.WorkOutActivity;
 import com.lambton.capstone_wic_fitandfine.activities.WorkingOutActivity;
+import com.lambton.capstone_wic_fitandfine.activities.chatbot.ChatBotWelcomActivity;
 import com.lambton.capstone_wic_fitandfine.models.Days;
 import com.lambton.capstone_wic_fitandfine.models.Workout;
 import com.natasa.progressviews.CircleSegmentBar;
@@ -61,6 +65,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     private ImageView mImgProfile;
     private ImageView mAbout;
     private Button btnSurveyList;
+    private Button btnFaq;
 
     ImageView next;
     int day;
@@ -108,6 +113,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         mAbout.setOnClickListener(this);
         mHandler = new Handler();
         segmentBar = (CircleSegmentBar)getView().findViewById(R.id.segment_bar);
+        btnFaq = (Button) getView().findViewById(R.id.btnFaq);
 
         initSegmentProgressBar();
         final Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
@@ -135,6 +141,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         });
 
     }
+
+
     private void setTimer() {
         mTimer = new Runnable() {
             @Override
@@ -183,7 +191,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.imageview_dashboard_notes:
-               // startActivity(new Intent(getContext(), NotesActivity.class));
+                startActivity(new Intent(getContext(), ChatBotWelcomActivity.class));
                 break;
             case R.id.imageview_dashboard_workout:
                 startActivity(new Intent(getContext(), WorkOutActivity.class));
@@ -196,10 +204,13 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.btnSurveyList:
-               // startActivity(new Intent(getActivity(), PastSurveyActivity.class));
+                startActivity(new Intent(getActivity(), SurveyStartActivity.class));
+                break;
+            case R.id.btnFaq:
+                 startActivity(new Intent(getActivity(), FAQActivity.class));
                 break;
             case R.id.imageview_dashboard_profile:
-              //  startActivity(new Intent(getActivity(), com.ibm.gsl.ui.profile.BaseProfile.ProfileActivity.class));
+                startActivity(new Intent(getActivity(), ProfileActivity.class));
                 break;
             case R.id.imageview_dashboard_about:
                 startActivity(new Intent(getActivity(), AboutActivity.class));

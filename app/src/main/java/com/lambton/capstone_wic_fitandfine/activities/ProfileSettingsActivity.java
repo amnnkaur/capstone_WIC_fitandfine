@@ -19,6 +19,7 @@ public class ProfileSettingsActivity extends AppCompatActivity {
     private SwitchCompat switch_email;
     private SwitchCompat switch_text;
     private SwitchCompat switch_touchid;
+    private SettingsData settingsData;
     private TextView text_standard;
     private TextView text_metric;
 

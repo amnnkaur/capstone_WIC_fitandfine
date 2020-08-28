@@ -2,6 +2,7 @@ package com.lambton.capstone_wic_fitandfine.activities;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.lambton.capstone_wic_fitandfine.R;
+import com.lambton.capstone_wic_fitandfine.activities.chatbot.ChatBotWelcomActivity;
 import com.lambton.capstone_wic_fitandfine.fragment.DashboardFragment;
 
 import java.util.ArrayList;
@@ -111,7 +113,7 @@ public class DashboardActivity extends AppCompatActivity implements ICallBackWee
                 case 0:
                     return new DashboardFragment();
                 case 1:
-                  //  return new MyTherapiesFragment();
+                    //startActivity(new Intent(new DashboardActivity(), ProgressActivity.class));
                 case 2:
                     return new DashboardFragment();
                 case 3:

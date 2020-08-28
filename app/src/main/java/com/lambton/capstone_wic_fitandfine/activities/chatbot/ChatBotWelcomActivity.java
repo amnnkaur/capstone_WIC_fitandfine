@@ -5,25 +5,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 
 import com.lambton.capstone_wic_fitandfine.R;
 
 public class ChatBotWelcomActivity extends AppCompatActivity {
 
-    Handler handler;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_bot_welcom);
 
-        handler=new Handler();
-        handler.postDelayed(new Runnable() {
+        button = (Button) findViewById(R.id.button_chat_bot_welcome);
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Intent intent=new Intent(ChatBotWelcomActivity.this, ChatBotActivity.class);
-                startActivity(intent);
-                finish();
+            public void onClick(View v) {
+                openNewActivity();
             }
-        },5000);  //Change after testing
+        });
+    }
+    public void openNewActivity(){
+        Intent intent = new Intent(this, ChatBotActivity.class);
+        startActivity(intent);
     }
 }
