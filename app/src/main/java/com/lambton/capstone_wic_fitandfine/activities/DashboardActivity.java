@@ -115,7 +115,7 @@ public class DashboardActivity extends AppCompatActivity implements ICallBackWee
                 case 1:
                     //startActivity(new Intent(new DashboardActivity(), ProgressActivity.class));
                 case 2:
-                    return new DashboardFragment();
+                    return new FactsActivity();
                 case 3:
                     //return CalendarFragment.newInstance(DashboardActivity.this);
                 default:
