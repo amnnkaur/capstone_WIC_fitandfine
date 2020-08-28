@@ -5,11 +5,11 @@
     android:id="@+id/dialogLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="?android:attr/colorLongPressedHighlight">
 
     <RelativeLayout
         android:id="@+id/con"
-        android:layout_width="403dp"
+        android:layout_width="329dp"
         android:layout_height="230dp"
         android:layout_gravity="center"
         android:layout_marginLeft="0dp"

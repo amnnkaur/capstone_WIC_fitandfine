@@ -21,7 +21,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/margin_between_field"
-                android:src="@drawable/ic_action_profile" />
+                app:srcCompat="@drawable/profile_icon" />
 
             <TextView
                 android:id="@+id/textview_dashboard_title"
@@ -174,23 +174,8 @@
                 android:drawableRight="@drawable/chevron_grey"
                 android:text="@string/dashboard_surveys" />
 
-            <ImageView style="@style/imageView.divider" />
 
-            <Button
-                style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/insights"
-                android:drawableRight="@drawable/chevron_grey"
-                android:text="@string/dashboard_personal_insights" />
 
-            <ImageView style="@style/imageView.divider" />
-
-            <Button
-                style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/progress"
-                android:drawableRight="@drawable/chevron_grey"
-                android:text="@string/dashboard_progress" />
-
-            <ImageView style="@style/imageView.divider" />
 
             <Button
                 android:id="@+id/btnFaq"
@@ -199,15 +184,8 @@
                 android:drawableRight="@drawable/chevron_grey"
                 android:text="FAQs" />
 
-            <ImageView style="@style/imageView.divider" />
 
-            <Button
-                style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/blog"
-                android:drawableRight="@drawable/chevron_grey"
-                android:text="@string/dashboard_blog" />
 
-            <ImageView style="@style/imageView.divider" />
 
         </LinearLayout>
 

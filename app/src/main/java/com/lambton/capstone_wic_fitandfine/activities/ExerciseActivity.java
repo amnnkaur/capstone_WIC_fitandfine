@@ -2,9 +2,12 @@ package com.lambton.capstone_wic_fitandfine.activities;
 
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,7 +35,7 @@ public class ExerciseActivity  extends AppCompatActivity implements View.OnClick
     FloatingActionButton fab;
     FragmentPagerItemAdapter adapter;
     FirebaseAuth mAuth;
-
+    AlertDialog alert;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,6 +146,7 @@ public class ExerciseActivity  extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.textview_log_pain_done:
                 save();
+
                 break;
 
         }
@@ -153,6 +157,37 @@ public class ExerciseActivity  extends AppCompatActivity implements View.OnClick
         DatabaseReference mRef = mDatabase.getReference("Users").child(mAuth.getCurrentUser().getUid()).child("workouts");
         mRef.keepSynced(true);
         mRef.child(String.valueOf(ex.getId())).setValue(ex);
-        Toast.makeText(this, R.string.toast_save, Toast.LENGTH_SHORT).show();
+
+        showAlert("Your changes were successfully saved!");
+
+       //Toast.makeText(this, R.string.toast_save, Toast.LENGTH_SHORT).show();
+
+       // startActivity(new Intent(ExerciseActivity.this, WorkOutActivity.class));
     }
+    private void showAlert(String message) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Alert!");
+        alertDialogBuilder.setMessage(message);
+        alertDialogBuilder.setIcon(R.drawable.ic_action_alerts);
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(ExerciseActivity.this, WorkOutActivity.class));
+              //  dialog.dismiss();
+               // finish();
+            }
+
+        });
+        alertDialogBuilder.setNegativeButton("Cancel ", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        alert = alertDialogBuilder.create();
+        alert.show();
+
+    }
+
+
 }
