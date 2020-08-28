@@ -33,11 +33,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.lambton.capstone_wic_fitandfine.R;
 import com.lambton.capstone_wic_fitandfine.activities.AboutActivity;
+import com.lambton.capstone_wic_fitandfine.activities.BlogActivity;
 import com.lambton.capstone_wic_fitandfine.activities.FAQActivity;
 import com.lambton.capstone_wic_fitandfine.activities.NutriActivity;
 import com.lambton.capstone_wic_fitandfine.activities.ProfileActivity;
 import com.lambton.capstone_wic_fitandfine.activities.ProgressActivity;
 import com.lambton.capstone_wic_fitandfine.activities.SurveyStartActivity;
+import com.lambton.capstone_wic_fitandfine.activities.SurveyWelcomeActivity;
 import com.lambton.capstone_wic_fitandfine.activities.WorkOutActivity;
 import com.lambton.capstone_wic_fitandfine.activities.WorkingOutActivity;
 import com.lambton.capstone_wic_fitandfine.activities.chatbot.ChatBotWelcomActivity;
@@ -203,7 +205,10 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 break;
 
             case R.id.btnSurveyList:
-                startActivity(new Intent(getActivity(), SurveyStartActivity.class));
+                startActivity(new Intent(getActivity(), SurveyWelcomeActivity.class));
+                break;
+            case R.id.btnBlog:
+                startActivity(new Intent(getActivity(), BlogActivity.class));
                 break;
             case R.id.imageview_dashboard_profile:
                 startActivity(new Intent(getActivity(), ProfileActivity.class));

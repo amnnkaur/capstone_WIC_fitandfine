@@ -14,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ContactUsActivity"></activity>
+        <activity android:name=".activities.SurveyQuestionFiveActivity"></activity>
+        <activity android:name=".activities.SurveyQuestionFourActivity" />
+        <activity android:name=".activities.SurveyQuestionThreeActivity" />
+        <activity android:name=".activities.SurveyQuestionTwoActivity" />
+        <activity android:name=".activities.ContactUsActivity" />
         <activity android:name=".activities.BlogActivity" />
         <activity android:name=".activities.ProgressActivity" />
         <activity android:name=".activities.NutriActivity" />
