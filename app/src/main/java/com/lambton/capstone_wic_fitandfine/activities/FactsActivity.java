@@ -49,7 +49,39 @@ public class FactsActivity extends AppCompatActivity {
 
     }
 
+    private void prepareLevelsData() {
+        Facts level = new Facts(R.string.level_10,R.string.level_10_name, R.string.level_10_description,R.drawable.star);
+        levelsList.add(level);
 
+        level = new Facts(R.string.level_9,R.string.level_9_name,R.string.level_9_description, R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_8,R.string.level_8_name,R.string.level_8_description,R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_7,R.string.level_7_name,R.string.level_7_description, R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_6,R.string.level_6_name,R.string.level_6_description, R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_5,R.string.level_5_name,R.string.level_5_description,R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_4,R.string.level_4_name,R.string.level_4_description, R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_3,R.string.level_3_name,R.string.level_3_description,R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_2,R.string.level_2_name,R.string.level_2_description, R.drawable.star);
+        levelsList.add(level);
+
+        level = new Facts(R.string.level_1,R.string.level_1_name,R.string.level_1_description,R.drawable.star);
+        levelsList.add(level);
+
+
+    }
 
     private void setToolBar() {
         // Find the toolbar view inside the activity layout

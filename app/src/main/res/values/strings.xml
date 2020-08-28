@@ -158,10 +158,10 @@
 
     <string name="about_contact_us">Contact Us</string>
     <string name="about_welcome_fit_fine">Welcome to\nFit &amp; Fine</string>
-    <string name="about_slogan">Making the world feel better without addiction</string>
-    <string name="about_opening_paragraphs">We are devoted to efficiently identifying and discovering effective treatment options for chronic pain through our revolutionary platform Ask Watson Pain, powered by IBM Watson. Ask Watson Pain’s artificial intelligence environment is designed to offer advanced searching and analytics to help diagnose and discover therapeutic solutions, both conventional and non-conventional.\n\nWe empower healthcare providers and patients to collaborate and discover suitable treatment options for chronic pain. The knowledge gained by Watson supports patients with chronic pain by giving them a deeper understanding to help monitor and manage their conditions.\n\nOur mission is to ignite a shift in the diagnosis, research, and therapeutic planning of the vast majority of chronic pain conditions. Ask Watson Pain’s ability to identify alternative treatment options for chronic pain will have a profoundly positive impact in the battle to stop the growing opioid crisis.</string>
+    <string name="about_slogan">Find everything you need to crush your fitness goals!</string>
+    <string name="about_opening_paragraphs">Fit &amp; Fine showcases a different approach to a fitness app with a chatbot that makes the data collection process more personal and fun.</string>
     <string name="about_our_policies">Our Policies</string>
-    <string name="about_policies_paragraph">We are devoted to efficiently identifying and discovering effective treatment options for chronic pain through our revolutionary platform Ask Watson Pain, powered by IBM Watson. Ask Watson Pain’s artificial intelligence environment is designed to offer advanced searching and analytics to help diagnose and discover therapeutic solutions, both conventional and non-conventional.</string>
+    <string name="about_policies_paragraph">With competent personnel, appropriate production equipment and continuous improvements according to the Lean concept we ensure high quality products with short lead times and delivery with high precision</string>
     <string name="about_medical_awareness">Medical Awareness</string>
     <string name="about_medical_awareness_paragraph">We empower healthcare providers and patients to collaborate and discover suitable treatment options for chronic pain. The knowledge gained by Watson supports patients with chronic pain by giving them a deeper understanding to help monitor and manage their conditions.</string>
     <string name="about_need_help">Need Help?</string>
@@ -639,5 +639,45 @@ is breakdown of the various ways you can earn points.</string>
     <string name="dont_forget_me">Don\'t forget me!</string>
     <string name="removed_from_workouts">&#160;removed from workouts!</string>
     <string name="was_added">&#160;was added!</string>
+
+    <string name="level_10">10</string>
+    <string name="level_10_name">Weight Loss Is Not the Most Important Goal</string>
+    <string name="level_10_description">Weight loss is the reason many people exercise in the first place. But its certainly not the sole benefit of an exercise program.</string>
+
+    <string name="level_9">9</string>
+    <string name="level_9_name">Exercise Boosts Performance</string>
+    <string name="level_9_description">After a few weeks of consistent exercise, you may feel your clothes fitting differently and see that your muscle tone has improved.</string>
+
+    <string name="level_8">8</string>
+    <string name="level_8_name">Exercise Lets You Eat More</string>
+    <string name="level_8_description">Pound for pound, muscle burns more calories at rest than body fat. So the more muscle you have, the higher your resting metabolic rate. And, of course, you also burn calories while you are actually exercising.</string>
+
+    <string name="level_7">7</string>
+    <string name="level_7_name">Fitness Pumps Up Your Heart</string>
+    <string name="level_7_description">Not only does exercise help fight disease, says Bryant, it creates a stronger heart the most important muscle in the body. That helps makes exercise and the activities of daily life feel easier.</string>
+
+    <string name="level_6">6</string>
+    <string name="level_6_name">Exercise Helps Ward Off Disease</string>
+    <string name="level_6_description">Research has shown that exercise can slow or help prevent heart disease, stroke, high blood pressure, high cholesterol, type 2 diabetes, arthritis, osteoporosis (bone loss), and loss of muscle mass, </string>
+
+    <string name="level_5">5</string>
+    <string name="level_5_name">Fitness Can Help Build Relationships</string>
+    <string name="level_5_description">Think of what exercising with a partner can do for a relationship, whether its with a spouse, a sibling, or a friend you used to go to lunch with once a week.</string>
+
+    <string name="level_4">4</string>
+    <string name="level_4_name">Its Not That Hard to Find Time for Fitness</string>
+    <string name="level_4_description">Indeed, squeezing in two or three bouts of 15 or 20 minutes of activity is just as effective as doing it all at once.</string>
+
+    <string name="level_3">3</string>
+    <string name="level_3_name">Exercise Gives You Energy</string>
+    <string name="level_3_description">You might be surprised at how, say, popping in a workout tape for 30 minutes in the morning can change your whole day.</string>
+
+    <string name="level_2">2</string>
+    <string name="level_2_name">Movement Melts Away Stress</string>
+    <string name="level_2_description">As much as it may stress you out just to think about exercising, once you actually start working out, you will experience less stress in every part of your life.</string>
+
+    <string name="level_1">1</string>
+    <string name="level_1_name"> Exercise Boosts Brainpower</string>
+    <string name="level_1_description">Not only does exercise improve your body, it helps your mental function</string>
 </resources>
 

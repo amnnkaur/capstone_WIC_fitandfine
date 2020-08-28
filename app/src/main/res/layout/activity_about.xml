@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/textview_about_welcome"
                     android:layout_marginTop="@dimen/margin_extra_big"
-                    android:src="@drawable/watson_logo_3x" />
+                    android:src="@drawable/aboutus1" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -111,21 +111,6 @@
                 android:text="@string/about_policies_paragraph"
                 android:textColor="@color/about_text_color" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/margin_between_field"
-                android:paddingTop="@dimen/margin_small"
-                android:text="@string/about_medical_awareness"
-                android:textColor="@color/generic_text_color"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/margin_between_field"
-                android:text="@string/about_medical_awareness_paragraph"
-                android:textColor="@color/about_text_color" />
 
             <TextView
                 android:layout_width="match_parent"
