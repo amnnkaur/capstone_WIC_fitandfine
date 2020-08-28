@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.lambton.capstone_wic_fitandfine.R;
 import com.lambton.capstone_wic_fitandfine.activities.FAQActivity;
+import com.lambton.capstone_wic_fitandfine.models.QA;
 
 import java.util.List;
 
@@ -130,18 +131,7 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.MyViewHolder> {
                 }
             }
         });
-        holder.mfp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ConnectivityManager connMan = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
-                assert connMan != null;
-                NetworkInfo netInfo = connMan.getActiveNetworkInfo();
-                if (netInfo != null && netInfo.isConnected()) {
-                    new BaseActivity.CheckTask().execute("https://play.google.com/store/apps/details?id=com.myfitnesspal.android");
-                } else
-                    Toast.makeText(activity, R.string.toast_check_connection, Toast.LENGTH_SHORT).show();
-            }
-        });
+
     }
 
     @Override
@@ -161,5 +151,4 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.MyViewHolder> {
 
         }
     }
-}
 }

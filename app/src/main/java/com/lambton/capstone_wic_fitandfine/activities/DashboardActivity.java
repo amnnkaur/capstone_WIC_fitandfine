@@ -117,7 +117,7 @@ public class DashboardActivity extends AppCompatActivity implements ICallBackWee
                 case 2:
                     return new FactsActivity();
                 case 3:
-                    //return CalendarFragment.newInstance(DashboardActivity.this);
+                    return new FAQActivity();
                 default:
                     return DashboardFragment.newInstance(position + 1);
             }
