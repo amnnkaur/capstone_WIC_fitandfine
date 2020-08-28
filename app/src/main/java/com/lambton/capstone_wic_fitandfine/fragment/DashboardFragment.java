@@ -34,6 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.lambton.capstone_wic_fitandfine.R;
 import com.lambton.capstone_wic_fitandfine.activities.AboutActivity;
 import com.lambton.capstone_wic_fitandfine.activities.NutriActivity;
+import com.lambton.capstone_wic_fitandfine.activities.ProgressActivity;
 import com.lambton.capstone_wic_fitandfine.activities.WorkOutActivity;
 import com.lambton.capstone_wic_fitandfine.activities.WorkingOutActivity;
 import com.lambton.capstone_wic_fitandfine.models.Days;
@@ -191,7 +192,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 startActivity(new Intent(getContext(), NutriActivity.class));
                 break;
             case R.id.imageview_dashboard_history:
-              //  startActivity(new Intent(getActivity(), HistoryDashboardActivity.class));
+                 startActivity(new Intent(getActivity(), ProgressActivity.class));
                 break;
 
             case R.id.btnSurveyList:
