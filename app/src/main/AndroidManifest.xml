@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -15,14 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MuscleActivity"></activity>
+        <activity android:name=".activities.NutriActivity"></activity>
+        <activity android:name=".activities.MuscleActivity" />
         <activity android:name=".activities.ExerciseActivity" />
         <activity android:name=".activities.WorkingOutActivity" />
-
         <activity
             android:name=".activities.WorkOutActivity"
-            android:parentActivityName=".activities.DashboardActivity"
-            />
+            android:parentActivityName=".activities.DashboardActivity" />
         <activity android:name=".activities.chatbot.ChatBotActivity" />
         <activity android:name=".activities.chatbot.ChatBotWelcomActivity" />
         <activity android:name=".activities.ProfileSettingsActivity" />
@@ -66,21 +64,19 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.Translucent"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".activities.DashboardActivity">
-
-        </activity>
+        <activity android:name=".activities.DashboardActivity"></activity>
         <activity
             android:name=".activities.LoginActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.Translucent"
             android:windowSoftInputMode="stateHidden|adjustPan">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.SplashActivity" />
         <activity android:name=".activities.MainActivity" />
     </application>
