@@ -22,13 +22,15 @@
             android:id="@+id/activity_splash_textview_name"
             style="@style/ask_watson_page_title"
             android:layout_marginTop="@dimen/margin_24dp"
-            android:fontFamily="@font/rale_bold" />
+            android:fontFamily="@font/helli"
+            android:textColor="@color/babypink" />
 
         <TextView
             android:id="@+id/activity_splash_textview_slogan"
             style="@style/onboarding_page_subheading"
             android:layout_marginTop="@dimen/margin_24dp"
-            android:fontFamily="@font/ralemedium"
-            android:text="@string/splash_slogan" />
+            android:fontFamily="@font/rale_bold"
+            android:text="@string/splash_slogan"
+            android:textColor="@color/accent_translucent" />
     </LinearLayout>
 </RelativeLayout>
