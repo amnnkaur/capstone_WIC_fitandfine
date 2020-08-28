@@ -176,28 +176,6 @@
 
             <ImageView style="@style/imageView.divider" />
 
-            <Button
-                style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/insights"
-                android:drawableRight="@drawable/chevron_grey"
-                android:text="@string/dashboard_personal_insights" />
-
-            <ImageView style="@style/imageView.divider" />
-
-            <Button
-                style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/progress"
-                android:drawableRight="@drawable/chevron_grey"
-                android:text="@string/dashboard_progress" />
-
-            <ImageView style="@style/imageView.divider" />
-
-            <Button
-                android:id="@+id/btnFaq"
-                style="@style/ButtonDashboardSecondary"
-                android:drawableLeft="@drawable/faq"
-                android:drawableRight="@drawable/chevron_grey"
-                android:text="FAQs" />
 
             <ImageView style="@style/imageView.divider" />
 
