@@ -20,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -95,6 +96,14 @@ public class WorkOutActivity extends BasicActivity implements RecyclerTouchHelpe
         workoutDialog = new Dialog(this);
         workoutDialogDays = new Dialog(this);
         saveDefault();
+
+        TextView ca = findViewById(R.id.textview_log_pain_done);
+        ca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             finish();
+            }
+        });
     }
 
     private void saveDefault() {
