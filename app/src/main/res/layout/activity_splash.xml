@@ -15,7 +15,7 @@
             android:id="@+id/activity_splash_imageview_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/watson_logo_2x" />
+            android:src="@drawable/logofinal" />
 
         <TextView
             android:id="@+id/activity_splash_textview_name"

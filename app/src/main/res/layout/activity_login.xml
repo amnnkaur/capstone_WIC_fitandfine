@@ -60,7 +60,7 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:src="@drawable/watson_logo"
+            android:src="@drawable/logofinal"
             />
 
 
