@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.lambton.capstone_wic_fitandfine.R;
 import com.lambton.capstone_wic_fitandfine.fragment.FragAMuscle;
+import com.lambton.capstone_wic_fitandfine.fragment.FragBMuscle;
 import com.lambton.capstone_wic_fitandfine.models.Days;
 import com.lambton.capstone_wic_fitandfine.models.Workout;
 
@@ -63,6 +64,10 @@ public class MuscleActivity extends AppCompatActivity implements View.OnClickLis
                     Intent intent = new Intent();
                     intent.putExtra("currentWorkout", workout);
                     setResult(RESULT_OK, intent);
+                    finish();
+                }
+                else if(f instanceof FragBMuscle)
+                {
                     finish();
                 }
                 break;

@@ -1,10 +1,16 @@
 package com.lambton.capstone_wic_fitandfine.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,30 +23,43 @@ import com.lambton.capstone_wic_fitandfine.models.Facts;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FactsActivity extends AppCompatActivity {
+import static com.facebook.FacebookSdk.getApplicationContext;
+
+public class FactsActivity extends Fragment implements View.OnClickListener {
 
     private List<Facts> levelsList;
     private RecyclerView recyclerView;
     private FactsAdapter mAdapter;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_facts);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_facts, container, false);
+        return rootView;
+    }
+    @SuppressLint("ClickableViewAccessibility")
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         levelsList = new ArrayList<>();
 
 
         setToolBar();
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_about_pain_levels);
+        recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view_about_pain_levels);
 
 
         mAdapter = new FactsAdapter(levelsList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
+        prepareLevelsData();
+    }
+
+    public FactsActivity()
+    {
+
     }
 
     @Override
@@ -85,12 +104,17 @@ public class FactsActivity extends AppCompatActivity {
 
     private void setToolBar() {
         // Find the toolbar view inside the activity layout
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) getView().findViewById(R.id.toolbar);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("FACTS");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      //  setSupportActionBar(toolbar);
+     //   getSupportActionBar().setTitle("FACTS");
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
 

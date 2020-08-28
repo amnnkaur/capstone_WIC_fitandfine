@@ -113,7 +113,6 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         mAbout.setOnClickListener(this);
         mHandler = new Handler();
         segmentBar = (CircleSegmentBar)getView().findViewById(R.id.segment_bar);
-        btnFaq = (Button) getView().findViewById(R.id.btnFaq);
 
         initSegmentProgressBar();
         final Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
@@ -205,9 +204,6 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
             case R.id.btnSurveyList:
                 startActivity(new Intent(getActivity(), SurveyStartActivity.class));
-                break;
-            case R.id.btnFaq:
-                 startActivity(new Intent(getActivity(), FAQActivity.class));
                 break;
             case R.id.imageview_dashboard_profile:
                 startActivity(new Intent(getActivity(), ProfileActivity.class));
