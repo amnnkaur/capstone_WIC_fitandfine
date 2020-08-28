@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -50,6 +51,8 @@ public class WorkOutActivity extends BasicActivity implements RecyclerTouchHelpe
     String[] day_data;
     Dialog workoutDialog;
     Dialog workoutDialogDays;
+    private List<Days> daysList;
+    private Workout workoutNow;
     Context context;
     private DatabaseReference mRef = null;
     private ConstraintLayout constraintLayout;
@@ -57,6 +60,7 @@ public class WorkOutActivity extends BasicActivity implements RecyclerTouchHelpe
     public RVAdapter adapter;
     EmptyRecyclerView rv;
     FirebaseAuth mAuth;
+    Workout dzdz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -641,5 +645,52 @@ public class WorkOutActivity extends BasicActivity implements RecyclerTouchHelpe
             snackbar.setActionTextColor(Color.YELLOW);
             snackbar.show();
         }
+    }
+    private int getData3() {
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Tdee", MODE_PRIVATE);
+        return sharedPreferences.getInt("GOAL", 0);
+    }
+
+    private int getDefault() {
+        SharedPreferences sharedPreferences = getSharedPreferences("Tdee", MODE_PRIVATE);
+        return sharedPreferences.getInt("DEF", 101);
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    protected void onResume() {
+        super.onResume();
+        FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+        SharedPreferences sharedPreferences = this.getSharedPreferences("Tdee", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor mEditor = sharedPreferences.edit();
+        DatabaseReference mRef = mDatabase.getReference("Users").child(mAuth.getCurrentUser().getUid()).child("workouts");
+        mRef.keepSynced(true);
+        mRef.orderByChild("def").equalTo(true).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
+                    if (childDataSnapshot != null)
+                        dzdz = childDataSnapshot.getValue(Workout.class);
+                }
+                if (dzdz != null) {
+                    daysList = dzdz.getDays();
+                    workoutNow = dzdz;
+                    mEditor.putInt("DEF", workoutNow.getId());
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        if (getDefault() == 101) {
+            mEditor.putString("WORK", getResources().getString(R.string.pick_workout));
+        } else if (dzdz != null) {
+            mEditor.putString("WORK", workoutNow.getName());
+        }
+        mEditor.apply();
     }
 }

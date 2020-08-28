@@ -227,8 +227,6 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
                                         dialog.dismiss();
 
                                         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                                        System.out.println(">>>>>>>>>>>>>" + firebaseUser.getUid());
-                                        System.out.println(">>>>>>>>>>>>>" + firebaseUser.getPhoneNumber());
                                         //System.out.println(">>>>>>>>>>>>>"+firebaseUser.getUid());
 
                                         Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
@@ -433,7 +431,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -444,18 +442,7 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
             // The Task returned from this call is always completed, no need to attach
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            //handleSignInResult(task);
-            try {
-                // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = task.getResult(ApiException.class);
-                firebaseAuthWithGoogle(account);
-            } catch (ApiException e) {
-                // Google Sign In failed, update UI appropriately
-                Log.w("sss", "Google sign in failed", e);
-                // [START_EXCLUDE]
-               // updateUI(null);
-                // [END_EXCLUDE]
-            }
+            handleSignInResult(task);
         }
         else
         {
@@ -464,59 +451,8 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-        // [START_EXCLUDE silent]
-        // [END_EXCLUDE]
 
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        auth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
 
-                            // Sign in success, update UI with the signed-in user's information
-
-                            final FirebaseUser user = auth.getCurrentUser();
-                            final String em = user.getEmail();
-                            DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-                            final DatabaseReference mChildDatabase = mRootRef.child("Users").child(auth.getCurrentUser().getUid());
-                            mChildDatabase.keepSynced(true);
-                            mRootRef.child("Users").orderByChild("userEmail").equalTo(em).addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    if (dataSnapshot.exists())
-                                        Log.e("ss", "User exists");
-                                    else {
-                                        mChildDatabase.child("userEmail").setValue(user.getEmail());
-                                        mChildDatabase.child("userID").setValue(user.getUid());
-                                        mChildDatabase.child("dateReg").setValue(currentDate);
-                                        mChildDatabase.child("workouts").setValue(workoutList);
-                                        mChildDatabase.child("weight").setValue("new");
-                                        startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
-                                        // Toast.makeText(MainActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-                                        displayAlert("Registered successfully", ll_splash);
-                                        dialog.dismiss();
-                                    }
-                                }
-
-                                @Override
-                                public void onCancelled(DatabaseError databaseError) {
-                                }
-                            });
-
-                        } else {
-
-                        }
-
-                        // [START_EXCLUDE]
-
-                        // [END_EXCLUDE]
-                    }
-                });
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask)
     {
         try {
@@ -526,7 +462,6 @@ public class LoginActivity extends BasicActivity implements View.OnClickListener
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
-
             //updateUI(null);
         }
     }
