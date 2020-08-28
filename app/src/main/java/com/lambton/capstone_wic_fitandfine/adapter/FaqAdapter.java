@@ -45,7 +45,7 @@ public class FaqAdapter extends RecyclerView.Adapter<FaqAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final QaAdapter.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final FaqAdapter.MyViewHolder holder, final int position) {
         final boolean[] bool = {false};
         QA qa = qaList.get(position);
         holder.question.setText(qa.getQuestion());
