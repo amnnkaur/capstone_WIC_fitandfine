@@ -15,6 +15,16 @@ public class Exercise implements Parcelable {
     public Exercise() {
     }
 
+    @Override
+    public String toString() {
+        return "Exercise{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", mechanics='" + mechanics + '\'' +
+                ", equip=" + equip +
+                '}';
+    }
+
     public Exercise(int id, String name, String mechanics, List<Equipment> equip) {
         this.id = id;
         this.name = name;

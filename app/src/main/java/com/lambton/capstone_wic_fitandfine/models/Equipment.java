@@ -10,6 +10,10 @@ public class Equipment implements Parcelable {
     public Equipment() {
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Equipment(String name) {
         this.name = name;
     }
@@ -29,6 +33,13 @@ public class Equipment implements Parcelable {
             return new Equipment[size];
         }
     };
+
+    @Override
+    public String toString() {
+        return "Equipment{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 
     public String getName() {
         return name;
